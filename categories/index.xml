@@ -2,24 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on deadc0de</title>
-    <link>https://deadc.de/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on deadc0de</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://deadc.de/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hardware Security</title>
-      <link>https://deadc.de/categories/hardware-security/</link>
+      <link>http://localhost:1313/categories/hardware-security/</link>
       <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://deadc.de/categories/hardware-security/</guid>
+      <guid>http://localhost:1313/categories/hardware-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Wireless Security</title>
-      <link>https://deadc.de/categories/wireless-security/</link>
+      <link>http://localhost:1313/categories/wireless-security/</link>
       <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://deadc.de/categories/wireless-security/</guid>
+      <guid>http://localhost:1313/categories/wireless-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Analysis</title>
+      <link>http://localhost:1313/categories/analysis/</link>
+      <pubDate>Sat, 22 Jun 2024 16:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/analysis/</guid>
       <description></description>
     </item>
   </channel>

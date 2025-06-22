@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>When Your Life Depends on a $30 Gamepad: The Titan Submarine and the F710 | deadc0de</title>
+<meta name="keywords" content="security, hardware, submarine, wireless, safety, titan, oceangate">
+<meta name="description" content="A deep dive into the security implications of using a Logitech F710 gamepad to control a deep-sea submersible, and what the Titan tragedy teaches us about engineering hubris">
+<meta name="author" content="deadc0de">
+<link rel="canonical" href="http://localhost:1313/posts/titan-submarine-f710-security/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/titan-submarine-f710-security/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="deadc0de (Alt + H)">deadc0de</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      When Your Life Depends on a $30 Gamepad: The Titan Submarine and the F710
+    </h1>
+    <div class="post-description">
+      A deep dive into the security implications of using a Logitech F710 gamepad to control a deep-sea submersible, and what the Titan tragedy teaches us about engineering hubris
+    </div>
+    <div class="post-meta"><span title='2024-06-22 16:00:00 +0000 UTC'>June 22, 2024</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;deadc0de
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="introduction-the-depths-of-engineering-hubris">Introduction: The Depths of Engineering Hubris<a hidden class="anchor" aria-hidden="true" href="#introduction-the-depths-of-engineering-hubris">#</a></h2>
+<p>On June 18, 2023, five people descended into the North Atlantic aboard the Titan submersible, each having paid $250,000 for the privilege of visiting the Titanic wreck. They never returned. The implosion of OceanGate&rsquo;s experimental deep-sea vessel didn&rsquo;t just claim five lives—it shattered the mythology of &ldquo;disrupting&rdquo; industries where physics doesn&rsquo;t care about your pitch deck.</p>
+<p>Netflix&rsquo;s recent documentary &ldquo;The Deepest Breath&rdquo; brought renewed attention to this tragedy, highlighting a cascade of engineering decisions that prioritized innovation over safety. Among the many troubling details, one caught the attention of the hacker community: the entire submersible was controlled by a modified Logitech F710 wireless gamepad—the same controller gathering dust in countless closets, relegated there after rage-quitting Dark Souls.</p>
+<p>As security researchers, we couldn&rsquo;t help but ask: &ldquo;Wait, wireless? At the bottom of the ocean? How secure could this possibly be?&rdquo;</p>
+<h2 id="the-titans-fatal-flaws-a-masterclass-in-what-not-to-do">The Titan&rsquo;s Fatal Flaws: A Masterclass in What Not to Do<a hidden class="anchor" aria-hidden="true" href="#the-titans-fatal-flaws-a-masterclass-in-what-not-to-do">#</a></h2>
+<p>Before we dive into the gamepad, let&rsquo;s establish the context of OceanGate&rsquo;s approach to engineering:</p>
+<h3 id="1-the-carbon-fiber-hull">1. <strong>The Carbon Fiber Hull</strong><a hidden class="anchor" aria-hidden="true" href="#1-the-carbon-fiber-hull">#</a></h3>
+<ul>
+<li>Traditional deep-sea submersibles use titanium or steel spheres—shapes that distribute pressure evenly</li>
+<li>Titan used a carbon fiber cylinder, a material that&rsquo;s great for aerospace but catastrophically unsuitable for repeated compression cycles</li>
+<li>Cost savings: ~$1.5 million vs $4 million for titanium</li>
+<li>Real cost: 5 lives</li>
+</ul>
+<h3 id="2-lack-of-certification">2. <strong>Lack of Certification</strong><a hidden class="anchor" aria-hidden="true" href="#2-lack-of-certification">#</a></h3>
+<ul>
+<li>OceanGate explicitly refused classification by DNV-GL or other maritime authorities</li>
+<li>CEO Stockton Rush called safety regulations &ldquo;pure waste&rdquo;</li>
+<li>No third-party inspection of critical systems</li>
+<li>The sub that imploded had made 13 successful dives—Russian roulette with physics</li>
+</ul>
+<h3 id="3-viewport-rated-to-1300-meters">3. <strong>Viewport Rated to 1,300 Meters</strong><a hidden class="anchor" aria-hidden="true" href="#3-viewport-rated-to-1300-meters">#</a></h3>
+<ul>
+<li>The Titanic lies at 3,800 meters</li>
+<li>The acrylic viewport was only certified to 1/3 of the operating depth</li>
+<li>Manufacturer explicitly warned against this use</li>
+<li>OceanGate&rsquo;s response: &ldquo;Innovation requires risk&rdquo;</li>
+</ul>
+<h3 id="4-acoustic-monitoring-system">4. <strong>Acoustic Monitoring System</strong><a hidden class="anchor" aria-hidden="true" href="#4-acoustic-monitoring-system">#</a></h3>
+<ul>
+<li>Instead of preventing hull failure, they tried to detect it in real-time</li>
+<li>Like installing a smoke detector instead of following fire codes</li>
+<li>By the time carbon fiber fails acoustically, you have milliseconds</li>
+</ul>
+<h3 id="5-the-control-system">5. <strong>The Control System</strong><a hidden class="anchor" aria-hidden="true" href="#5-the-control-system">#</a></h3>
+<ul>
+<li>Modified Logitech F710 Wireless Gamepad ($29.99 on Amazon, when in stock)</li>
+<li>Running through a custom software stack</li>
+<li>No redundancy for critical controls</li>
+<li>Wireless communication in a metal tube surrounded by salt water</li>
+</ul>
+<h2 id="the-hackers-perspective-they-used-what">The Hacker&rsquo;s Perspective: &ldquo;They Used WHAT?&rdquo;<a hidden class="anchor" aria-hidden="true" href="#the-hackers-perspective-they-used-what">#</a></h2>
+<p>When the hacker community learned about the F710 controller, the collective response was somewhere between horror and morbid fascination. Here&rsquo;s what went through our minds:</p>
+<h3 id="initial-thoughts">Initial Thoughts:<a hidden class="anchor" aria-hidden="true" href="#initial-thoughts">#</a></h3>
+<ol>
+<li>&ldquo;Please tell me they meant wired&hellip;&rdquo;</li>
+<li>&ldquo;They didn&rsquo;t.&rdquo;</li>
+<li>&ldquo;Oh no.&rdquo;</li>
+<li>&ldquo;Time to order an F710 and tear it apart.&rdquo;</li>
+</ol>
+<p>As I detailed in my <a href="/posts/joystick-f710/">previous reverse engineering analysis</a>, what we found was worse than expected.</p>
+<h2 id="technical-deep-dive-the-f710-security-nightmare">Technical Deep Dive: The F710 Security Nightmare<a hidden class="anchor" aria-hidden="true" href="#technical-deep-dive-the-f710-security-nightmare">#</a></h2>
+<h3 id="the-protocol-stack">The Protocol Stack<a hidden class="anchor" aria-hidden="true" href="#the-protocol-stack">#</a></h3>
+<pre tabindex="0"><code>Application Layer: DirectInput/XInput Commands
+     ↓
+HID Layer: Human Interface Device Protocol  
+     ↓
+Wireless Layer: 2.4GHz Proprietary Protocol
+     ↓
+Physical Layer: Unencrypted RF Transmission
+</code></pre><h3 id="critical-vulnerabilities-identified">Critical Vulnerabilities Identified:<a hidden class="anchor" aria-hidden="true" href="#critical-vulnerabilities-identified">#</a></h3>
+<h4 id="1-no-encryption-whatsoever">1. <strong>No Encryption Whatsoever</strong><a hidden class="anchor" aria-hidden="true" href="#1-no-encryption-whatsoever">#</a></h4>
+<p>Every command is transmitted in cleartext. Using a $20 RTL-SDR, you can:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Pseudocode for interception</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">intercept_f710_commands</span>():
+</span></span><span style="display:flex;"><span>    sdr <span style="color:#f92672">=</span> RTLSDRDevice(frequency<span style="color:#f92672">=</span><span style="color:#ae81ff">2.4e9</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>        signal <span style="color:#f92672">=</span> sdr<span style="color:#f92672">.</span>read_samples()
+</span></span><span style="display:flex;"><span>        packet <span style="color:#f92672">=</span> demodulate_fsk(signal)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> is_f710_packet(packet):
+</span></span><span style="display:flex;"><span>            command <span style="color:#f92672">=</span> parse_hid_command(packet)
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Intercepted: </span><span style="color:#e6db74">{</span>command<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><h4 id="2-no-authentication-mechanism">2. <strong>No Authentication Mechanism</strong><a hidden class="anchor" aria-hidden="true" href="#2-no-authentication-mechanism">#</a></h4>
+<p>The receiver accepts any properly formatted packet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// Simplified packet structure
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> F710Packet {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint8_t</span> device_id;    <span style="color:#75715e">// Static, easily spoofed
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint8_t</span> sequence;     <span style="color:#75715e">// Predictable increment
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint16_t</span> buttons;     <span style="color:#75715e">// No signature
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int8_t</span> axes[<span style="color:#ae81ff">4</span>];       <span style="color:#75715e">// No validation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint8_t</span> checksum;     <span style="color:#75715e">// CRC8, not cryptographic
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
+</span></span></code></pre></div><h4 id="3-replay-attack-vulnerability">3. <strong>Replay Attack Vulnerability</strong><a hidden class="anchor" aria-hidden="true" href="#3-replay-attack-vulnerability">#</a></h4>
+<p>Commands can be captured and replayed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Capture 10 seconds of &#34;surface&#34; commands</span>
+</span></span><span style="display:flex;"><span>hackrf_transfer -r surface_commands.iq -f 2.4e9 -s 20e6
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Replay at will</span>
+</span></span><span style="display:flex;"><span>hackrf_transfer -t surface_commands.iq -f 2.4e9 -s 20e6
+</span></span></code></pre></div><h4 id="4-frequency-hopping-more-like-frequency-hoping">4. <strong>Frequency Hopping? More Like Frequency Hoping</strong><a hidden class="anchor" aria-hidden="true" href="#4-frequency-hopping-more-like-frequency-hoping">#</a></h4>
+<p>The F710 uses basic frequency hopping across 2.4GHz channels:</p>
+<ul>
+<li>Predictable pattern</li>
+<li>No time synchronization required</li>
+<li>Easily jammed with wideband noise</li>
+</ul>
+<h3 id="the-submarine-environment-making-bad-worse">The Submarine Environment: Making Bad Worse<a hidden class="anchor" aria-hidden="true" href="#the-submarine-environment-making-bad-worse">#</a></h3>
+<p>The underwater environment adds unique challenges:</p>
+<ol>
+<li>
+<p><strong>RF Propagation in Pressure Vessels</strong></p>
+<ul>
+<li>Metal hull creates Faraday cage effects</li>
+<li>Unpredictable reflections and dead zones</li>
+<li>Potential for standing waves at 2.4GHz</li>
+</ul>
+</li>
+<li>
+<p><strong>Electromagnetic Interference</strong></p>
+<ul>
+<li>Thrusters generating massive EM fields</li>
+<li>Life support systems</li>
+<li>Navigation equipment</li>
+<li>All operating in close proximity</li>
+</ul>
+</li>
+<li>
+<p><strong>Salt Water and Electronics</strong></p>
+<ul>
+<li>2.4GHz heavily absorbed by water</li>
+<li>Any hull breach = instant communication loss</li>
+<li>Corrosion of RF components</li>
+</ul>
+</li>
+</ol>
+<h2 id="attack-scenarios-from-theoretical-to-theatrical">Attack Scenarios: From Theoretical to Theatrical<a hidden class="anchor" aria-hidden="true" href="#attack-scenarios-from-theoretical-to-theatrical">#</a></h2>
+<h3 id="realistic-attack-the-inside-job">Realistic Attack: The Inside Job<a hidden class="anchor" aria-hidden="true" href="#realistic-attack-the-inside-job">#</a></h3>
+<p>The most plausible attack doesn&rsquo;t require James Cameron&rsquo;s submarine:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Attack deployed via compromised laptop on support vessel</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TitanAttack</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>sdr <span style="color:#f92672">=</span> HackRFDevice()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>target_freq <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.405e9</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">jam_controller</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;Denial of Service - Jam the controller frequency&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        noise <span style="color:#f92672">=</span> generate_white_noise(bandwidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2e6</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>sdr<span style="color:#f92672">.</span>transmit(noise, self<span style="color:#f92672">.</span>target_freq, power<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">inject_commands</span>(self, command_sequence):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;Send malicious commands&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> cmd <span style="color:#f92672">in</span> command_sequence:
+</span></span><span style="display:flex;"><span>            packet <span style="color:#f92672">=</span> craft_f710_packet(cmd)
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>sdr<span style="color:#f92672">.</span>transmit(packet, self<span style="color:#f92672">.</span>target_freq)
+</span></span><span style="display:flex;"><span>            time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.016</span>)  <span style="color:#75715e"># 60Hz update rate</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">execute_spin_cycle</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;Make submersible spin uncontrollably&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        spin_commands <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>            {<span style="color:#e6db74">&#34;yaw&#34;</span>: <span style="color:#ae81ff">127</span>, <span style="color:#e6db74">&#34;pitch&#34;</span>: <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;thrust&#34;</span>: <span style="color:#ae81ff">0</span>},  <span style="color:#75715e"># Full right</span>
+</span></span><span style="display:flex;"><span>            {<span style="color:#e6db74">&#34;yaw&#34;</span>: <span style="color:#f92672">-</span><span style="color:#ae81ff">127</span>, <span style="color:#e6db74">&#34;pitch&#34;</span>: <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;thrust&#34;</span>: <span style="color:#ae81ff">0</span>}, <span style="color:#75715e"># Full left</span>
+</span></span><span style="display:flex;"><span>        ] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>inject_commands(spin_commands)
+</span></span></code></pre></div><h3 id="the-hollywood-scenario-camerons-revenge">The Hollywood Scenario: Cameron&rsquo;s Revenge<a hidden class="anchor" aria-hidden="true" href="#the-hollywood-scenario-camerons-revenge">#</a></h3>
+<p>Since we&rsquo;re going theatrical, let&rsquo;s imagine the full scenario:</p>
+<p><strong>Mission: Operation Deep Hack</strong></p>
+<p><em>Equipment Required:</em></p>
+<ul>
+<li>1x Modified Deepsea Challenger (thanks, James!)</li>
+<li>1x Pressure-resistant SDR suite ($2M custom build)</li>
+<li>1x Quantum entangled communication system (for live streaming the hack)</li>
+<li>1x Underwater hacker (must have PADI Advanced Open Water + CISSP)</li>
+</ul>
+<p><em>The Plan:</em></p>
+<ol>
+<li>Descend to 3,800m (2.5 hour journey)</li>
+<li>Locate Titan using active sonar (alerting every marine biologist in 50 miles)</li>
+<li>Approach within 10m without colliding in pitch darkness</li>
+<li>Deploy the &ldquo;Hack-topus 3000&rdquo; - RF tentacles that wrap around Titan</li>
+<li>Execute attack while dealing with:
+<ul>
+<li>380 atmospheres of pressure</li>
+<li>2°C water temperature</li>
+<li>Zero visibility</li>
+<li>Crushing existential dread</li>
+<li>Windows updates on the attack laptop</li>
+</ul>
+</li>
+</ol>
+<p><em>Success Rate:</em> 0.001% (the 0.001% is if Poseidon personally assists)</p>
+<h2 id="the-real-impact-when-theory-meets-reality">The Real Impact: When Theory Meets Reality<a hidden class="anchor" aria-hidden="true" href="#the-real-impact-when-theory-meets-reality">#</a></h2>
+<h3 id="immediate-consequences-of-controller-failure">Immediate Consequences of Controller Failure:<a hidden class="anchor" aria-hidden="true" href="#immediate-consequences-of-controller-failure">#</a></h3>
+<ol>
+<li>
+<p><strong>Complete Loss of Control</strong></p>
+<ul>
+<li>No manual override</li>
+<li>No mechanical backup</li>
+<li>No wired emergency system</li>
+<li>Passengers become spectators to their fate</li>
+</ul>
+</li>
+<li>
+<p><strong>Cascading System Failures</strong></p>
+<pre tabindex="0"><code>Controller Fails → No Thrust Control → Current Takes Over →
+Collision with Debris → Hull Damage → Game Over
+</code></pre></li>
+<li>
+<p><strong>Psychological Impact</strong></p>
+<ul>
+<li>Imagine knowing your life depends on AAA batteries</li>
+<li>The same controller that failed during your Rocket League match</li>
+<li>Now failing at 3,800 meters depth</li>
+</ul>
+</li>
+</ol>
+<h3 id="financial-impact">Financial Impact:<a hidden class="anchor" aria-hidden="true" href="#financial-impact">#</a></h3>
+<ul>
+<li>Development cost of Titan: ~$15 million</li>
+<li>Cost per dive: ~$250,000 per passenger</li>
+<li>Insurance claims: Likely $50+ million</li>
+<li>OceanGate company value: $0 (bankrupt)</li>
+<li>Industry damage: Immeasurable</li>
+</ul>
+<h3 id="the-regulatory-earthquake">The Regulatory Earthquake:<a hidden class="anchor" aria-hidden="true" href="#the-regulatory-earthquake">#</a></h3>
+<p>The Titan disaster triggered:</p>
+<ul>
+<li>Immediate moratorium on experimental deep-sea tourism</li>
+<li>Congressional hearings on maritime safety</li>
+<li>Industry-wide review of classification requirements</li>
+<li>Insurance companies refusing coverage without certification</li>
+</ul>
+<h2 id="lessons-for-the-security-community">Lessons for the Security Community<a hidden class="anchor" aria-hidden="true" href="#lessons-for-the-security-community">#</a></h2>
+<h3 id="1-consumer-vs-industrial-grade">1. <strong>Consumer vs. Industrial Grade</strong><a hidden class="anchor" aria-hidden="true" href="#1-consumer-vs-industrial-grade">#</a></h3>
+<p>There&rsquo;s a reason industrial controllers cost $3,000 instead of $30:</p>
+<ul>
+<li>Redundant communication paths</li>
+<li>Cryptographic authentication</li>
+<li>Environmental hardening</li>
+<li>Fail-safe modes</li>
+<li>Extensive testing and certification</li>
+</ul>
+<h3 id="2-wireless-in-critical-systems">2. <strong>Wireless in Critical Systems</strong><a hidden class="anchor" aria-hidden="true" href="#2-wireless-in-critical-systems">#</a></h3>
+<p>If it absolutely must be wireless:</p>
+<ul>
+<li>Use encrypted protocols (AES-256 minimum)</li>
+<li>Implement mutual authentication</li>
+<li>Add jamming detection</li>
+<li>Include wired backup</li>
+<li>Test interference scenarios</li>
+</ul>
+<h3 id="3-the">3. <strong>The &ldquo;It Works&rdquo; Fallacy</strong><a hidden class="anchor" aria-hidden="true" href="#3-the">#</a></h3>
+<p>&ldquo;We&rsquo;ve used it 13 times without issue&rdquo; is not a safety validation:</p>
+<ul>
+<li>Carbon fiber degrades with each compression cycle</li>
+<li>Wireless interference is environmental</li>
+<li>Battery life decreases over time</li>
+<li>Luck is not a engineering principle</li>
+</ul>
+<h3 id="4-security-through-obscurity-doesn">4. <strong>Security Through Obscurity Doesn&rsquo;t Work</strong><a hidden class="anchor" aria-hidden="true" href="#4-security-through-obscurity-doesn">#</a></h3>
+<p>OceanGate assumed nobody would:</p>
+<ul>
+<li>Reverse engineer their custom software</li>
+<li>Interfere with deep-sea operations</li>
+<li>Exploit consumer hardware vulnerabilities</li>
+<li>All assumptions that aged poorly</li>
+</ul>
+<h2 id="technical-recommendations-for-future-systems">Technical Recommendations for Future Systems<a hidden class="anchor" aria-hidden="true" href="#technical-recommendations-for-future-systems">#</a></h2>
+<h3 id="for-submersible-designers">For Submersible Designers:<a hidden class="anchor" aria-hidden="true" href="#for-submersible-designers">#</a></h3>
+<ol>
+<li>
+<p><strong>Primary Control System</strong></p>
+<pre tabindex="0"><code>Requirements:
+- Wired connection with optical fiber backup
+- Military-spec connectors (rated for pressure)
+- Redundant control paths
+- Cryptographically signed commands
+- Real-time integrity checking
+</code></pre></li>
+<li>
+<p><strong>Emergency Override System</strong></p>
+<pre tabindex="0"><code>- Mechanical ballast release
+- Acoustic command system (military-grade)
+- Dead man&#39;s switch for auto-surface
+- Manual control surfaces
+</code></pre></li>
+<li>
+<p><strong>Wireless Systems (If Absolutely Required)</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SecureSubmersibleControl</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>encryption <span style="color:#f92672">=</span> AES256_GCM()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>auth <span style="color:#f92672">=</span> Ed25519_Signature()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>anti_replay <span style="color:#f92672">=</span> TimeWindowProtection(window<span style="color:#f92672">=</span><span style="color:#ae81ff">1.0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_command</span>(self, command):
+</span></span><span style="display:flex;"><span>        timestamp <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time_ns()
+</span></span><span style="display:flex;"><span>        nonce <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>urandom(<span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Sign the command</span>
+</span></span><span style="display:flex;"><span>        signature <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>auth<span style="color:#f92672">.</span>sign(command <span style="color:#f92672">+</span> timestamp)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Encrypt command + signature</span>
+</span></span><span style="display:flex;"><span>        ciphertext <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>encryption<span style="color:#f92672">.</span>encrypt(
+</span></span><span style="display:flex;"><span>            plaintext<span style="color:#f92672">=</span>command <span style="color:#f92672">+</span> signature,
+</span></span><span style="display:flex;"><span>            nonce<span style="color:#f92672">=</span>nonce,
+</span></span><span style="display:flex;"><span>            associated_data<span style="color:#f92672">=</span>timestamp
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Add anti-replay token</span>
+</span></span><span style="display:flex;"><span>        packet <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>anti_replay<span style="color:#f92672">.</span>wrap(ciphertext, timestamp)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Transmit with FEC</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>transmit_with_redundancy(packet)
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="for-security-researchers">For Security Researchers:<a hidden class="anchor" aria-hidden="true" href="#for-security-researchers">#</a></h3>
+<ol>
+<li>
+<p><strong>When Analyzing Life-Critical Systems:</strong></p>
+<ul>
+<li>Consider environmental factors</li>
+<li>Test failure modes extensively</li>
+<li>Document all vulnerabilities clearly</li>
+<li>Provide actionable recommendations</li>
+<li>Remember: Lives depend on your work</li>
+</ul>
+</li>
+<li>
+<p><strong>Responsible Disclosure:</strong></p>
+<ul>
+<li>For active systems: immediate private disclosure</li>
+<li>Include proof-of-concept with safety guards</li>
+<li>Suggest specific mitigations</li>
+<li>Follow up on implementation</li>
+</ul>
+</li>
+</ol>
+<h2 id="the-bigger-picture-innovation-vs-safety">The Bigger Picture: Innovation vs. Safety<a hidden class="anchor" aria-hidden="true" href="#the-bigger-picture-innovation-vs-safety">#</a></h2>
+<p>Silicon Valley&rsquo;s &ldquo;move fast and break things&rdquo; has no place in:</p>
+<ul>
+<li>Submersibles</li>
+<li>Aircraft</li>
+<li>Medical devices</li>
+<li>Nuclear reactors</li>
+<li>Autonomous vehicles</li>
+</ul>
+<p>These industries have safety standards written in blood. ISO 26262, DO-178C, IEC 62304—they exist because people died when corners were cut.</p>
+<h2 id="conclusion-respect-the-ocean-respect-the-standards">Conclusion: Respect the Ocean, Respect the Standards<a hidden class="anchor" aria-hidden="true" href="#conclusion-respect-the-ocean-respect-the-standards">#</a></h2>
+<p>The Titan tragedy wasn&rsquo;t just about a gaming controller—it was about a fundamental misunderstanding of risk. The ocean doesn&rsquo;t care about your minimum viable product. Physics doesn&rsquo;t pivot based on user feedback. At 3,800 meters depth, there are no software patches.</p>
+<p>As hackers and security researchers, we have a responsibility. When we see consumer hardware in life-critical applications, we must speak up. When we find vulnerabilities, we must disclose responsibly. When standards are ignored, we must advocate for safety.</p>
+<p>The F710 is a perfectly fine gaming controller. I still use mine (wired mode only now). But between my couch and a submarine&rsquo;s command station lies an ocean of engineering requirements that no amount of disruption can bridge.</p>
+<p>To the five souls lost on the Titan: Stockton Rush, Hamish Harding, Paul-Henri Nargeolet, Shahzada Dawood, and Suleman Dawood—may your tragedy ensure others don&rsquo;t repeat these mistakes.</p>
+<p>To future engineers: Standards aren&rsquo;t obstacles to innovation. They&rsquo;re the shoulders of giants, offering you a view of all the ways things can go wrong, so you can focus on making things go right.</p>
+<p><em>For the complete technical analysis of the F710 vulnerabilities, including PoC code and packet captures, see my <a href="/posts/joystick-f710/">detailed reverse engineering post</a>.</em></p>
+<hr>
+<p><em>Disclaimer: This analysis is for educational purposes. Do not attempt to interfere with any maritime vessels, submersible or otherwise. Also, please return James Cameron&rsquo;s submarine in the condition you borrowed it.</em></p>
+<p><em>If you&rsquo;re designing life-critical systems and using this post as a &ldquo;what not to do&rdquo; guide—good. That&rsquo;s the point.</em></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/security/">Security</a></li>
+      <li><a href="http://localhost:1313/tags/hardware/">Hardware</a></li>
+      <li><a href="http://localhost:1313/tags/submarine/">Submarine</a></li>
+      <li><a href="http://localhost:1313/tags/wireless/">Wireless</a></li>
+      <li><a href="http://localhost:1313/tags/safety/">Safety</a></li>
+      <li><a href="http://localhost:1313/tags/titan/">Titan</a></li>
+      <li><a href="http://localhost:1313/tags/oceangate/">Oceangate</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">deadc0de</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
