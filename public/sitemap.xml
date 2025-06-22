@@ -8,8 +8,24 @@
     <loc>https://example.org/posts/</loc>
     <lastmod>2025-06-22T15:34:43-03:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://example.org/tags/hardware/</loc>
+    <lastmod>2025-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/joystick/</loc>
+    <lastmod>2025-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/joystick-f710/</loc>
+    <lastmod>2025-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/reverse-engineering/</loc>
+    <lastmod>2025-06-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/</loc>
+    <lastmod>2025-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/usb/</loc>
+    <lastmod>2025-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/</loc>
   </url>
 </urlset>

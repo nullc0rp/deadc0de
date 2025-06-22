@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Hardware on My New Hugo Site</title>
+    <link>https://example.org/tags/hardware/</link>
+    <description>Recent content in Hardware on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 21 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reverse Engineering the Logitech F710 Joystick</title>
       <link>https://example.org/posts/joystick-f710/</link>
