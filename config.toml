@@ -1,1 +1,23 @@
+baseURL = "https://deadc.de/"
+languageCode = "en-us"
+title = "deadc0de"
 theme = "PaperMod"
+
+[params]
+  author = "deadc0de"
+  description = "Security research by deadc0de"
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
