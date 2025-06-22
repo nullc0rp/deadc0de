@@ -145,17 +145,17 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Reverse Engineering the Logitech F710 Joystick
+    <h2 class="entry-hint-parent">Complete Technical Analysis: Reverse Engineering the Logitech F710 Wireless Gamepad and Developing a Security PoC
     </h2>
   </header>
   <div class="entry-content">
-    <p>This post will collect all research, tests, and security findings related to the Logitech F710 wireless joystick.
-Overview The Logitech F710 is a popular wireless gamepad using a 2.4GHz USB dongle. We’re interested in:
-USB communication Firmware behavior Signal sniffing Security posture of the dongle ↔ device communication TODO (coming soon) Packet captures and analysis HID descriptor breakdown Replay and fuzzing tests Dongle firmware dump (if possible) Stay tuned — this post will grow over time.
+    <p>Executive Summary This comprehensive technical analysis documents the complete reverse engineering of the Logitech F710 wireless gamepad, including the development of a proof-of-concept (PoC) that demonstrates critical security vulnerabilities in the device’s wireless protocol. Our research revealed that the F710 uses an unencrypted, unauthenticated 2.4GHz proprietary protocol vulnerable to replay attacks, signal injection, and device spoofing.
+Key findings:
+No encryption on the wireless protocol No mutual authentication between controller and dongle Vulnerable to replay attacks with basic SDR equipment Successfully developed PoC for controller spoofing and input injection Legacy protocol similar to vulnerable Logitech Unifying receivers Introduction The Logitech F710 represents a significant portion of the wireless gamepad market, particularly in industrial and commercial applications where its reliability and compatibility are valued. However, our research reveals that this popularity comes with serious security implications.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-06-21 00:00:00 +0000 UTC'>June 21, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;deadc0de</footer>
-  <a class="entry-link" aria-label="post link to Reverse Engineering the Logitech F710 Joystick" href="https://deadc.de/posts/joystick-f710/"></a>
+  <footer class="entry-footer"><span title='2025-06-22 00:00:00 +0000 UTC'>June 22, 2025</span>&nbsp;·&nbsp;10 min&nbsp;·&nbsp;deadc0de</footer>
+  <a class="entry-link" aria-label="post link to Complete Technical Analysis: Reverse Engineering the Logitech F710 Wireless Gamepad and Developing a Security PoC" href="https://deadc.de/posts/joystick-f710/"></a>
 </article>
     </main>
     
