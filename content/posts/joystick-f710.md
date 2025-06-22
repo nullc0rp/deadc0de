@@ -612,21 +612,7 @@ class F710SecurityFilter:
 
 ---
 
-## Responsible Disclosure
-
-Timeline:
-- **2025-03-15**: Initial discovery
-- **2025-03-20**: PoC development complete
-- **2025-03-25**: Vendor notification (Logitech Security Team)
-- **2025-04-10**: Vendor acknowledged, "legacy product"
-- **2025-05-15**: 60-day deadline passed
-- **2025-06-22**: Public disclosure
-
-Logitech's response indicated that the F710 is considered a legacy product and will not receive security updates. They recommended using newer products with Lightspeed technology for security-conscious applications.
-
----
-
-## Tools and Code
+## TODO: Tools and Code 
 
 All tools developed during this research are available:
 
