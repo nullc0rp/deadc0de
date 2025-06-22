@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reverse-Engineering on deadc0de</title>
     <link>https://deadc.de/tags/reverse-engineering/</link>
     <description>Recent content in Reverse-Engineering on deadc0de</description>
-    <generator>Hugo -- 0.147.8</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 21 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://deadc.de/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
@@ -13,23 +13,7 @@
       <link>https://deadc.de/posts/joystick-f710/</link>
       <pubDate>Sat, 21 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://deadc.de/posts/joystick-f710/</guid>
-      <description>&lt;p&gt;This post will collect all research, tests, and security findings related to the &lt;strong&gt;Logitech F710 wireless joystick&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;The Logitech F710 is a popular wireless gamepad using a 2.4GHz USB dongle. We&amp;rsquo;re interested in:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;USB communication&lt;/li&gt;
-&lt;li&gt;Firmware behavior&lt;/li&gt;
-&lt;li&gt;Signal sniffing&lt;/li&gt;
-&lt;li&gt;Security posture of the dongle ↔ device communication&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;todo-coming-soon&#34;&gt;TODO (coming soon)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Packet captures and analysis&lt;/li&gt;
-&lt;li&gt;HID descriptor breakdown&lt;/li&gt;
-&lt;li&gt;Replay and fuzzing tests&lt;/li&gt;
-&lt;li&gt;Dongle firmware dump (if possible)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Stay tuned — this post will grow over time.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This post will collect all research, tests, and security findings related to the &lt;strong&gt;Logitech F710 wireless joystick&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The Logitech F710 is a popular wireless gamepad using a 2.4GHz USB dongle. We&amp;rsquo;re interested in:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;USB communication&lt;/li&gt;&#xA;&lt;li&gt;Firmware behavior&lt;/li&gt;&#xA;&lt;li&gt;Signal sniffing&lt;/li&gt;&#xA;&lt;li&gt;Security posture of the dongle ↔ device communication&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;todo-coming-soon&#34;&gt;TODO (coming soon)&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Packet captures and analysis&lt;/li&gt;&#xA;&lt;li&gt;HID descriptor breakdown&lt;/li&gt;&#xA;&lt;li&gt;Replay and fuzzing tests&lt;/li&gt;&#xA;&lt;li&gt;Dongle firmware dump (if possible)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Stay tuned — this post will grow over time.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

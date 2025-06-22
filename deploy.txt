@@ -1,0 +1,131 @@
+HUGO BLOG DEPLOYMENT GUIDE FOR DEADC.DE
+========================================
+
+PREREQUISITES
+-------------
+- Hugo installed locally
+- Git repository set up with main and gh-pages branches
+- GitHub Pages configured to deploy from gh-pages branch
+
+WRITING A NEW BLOG POST
+-----------------------
+1. Make sure you're on the main branch:
+   git checkout main
+
+2. Create a new post using Hugo:
+   hugo new posts/my-new-post.md
+
+3. Edit the post:
+   nano content/posts/my-new-post.md
+
+4. Post template:
+   ---
+   title: "Your Post Title"
+   date: 2024-06-22T16:00:00Z
+   draft: false
+   tags: ["tag1", "tag2"]
+   categories: ["category1"]
+   description: "Brief description of your post"
+   ---
+
+   Your content goes here...
+
+5. Preview locally:
+   hugo server -D
+   # Open http://localhost:1313 in browser
+   # Press Ctrl+C to stop
+
+PUBLISHING YOUR POST
+--------------------
+1. Make sure draft is set to false in your post
+
+2. Build the site:
+   hugo
+
+3. Commit your source files:
+   git add content/posts/my-new-post.md
+   git commit -m "Add new post: Your Post Title"
+   git push origin main
+
+4. Deploy to GitHub Pages:
+   # Switch to gh-pages branch
+   git checkout gh-pages
+   
+   # Pull any remote changes
+   git pull origin gh-pages
+   
+   # Copy the built files
+   cp -r public/* .
+   
+   # Make sure CNAME file exists
+   echo "deadc.de" > CNAME
+   
+   # Add and commit all changes
+   git add .
+   git commit -m "Deploy: Your Post Title"
+   
+   # Push to GitHub
+   git push origin gh-pages
+   
+   # Go back to main branch
+   git checkout main
+
+5. Your post will be live at deadc.de in a few minutes!
+
+QUICK DEPLOY SCRIPT
+-------------------
+Create a deploy.sh file with this content:
+
+#!/bin/bash
+echo "Building site..."
+hugo
+
+echo "Switching to gh-pages branch..."
+git checkout gh-pages
+
+echo "Copying files..."
+cp -r public/* .
+echo "deadc.de" > CNAME
+
+echo "Deploying..."
+git add .
+git commit -m "Deploy: $(date)"
+git push origin gh-pages
+
+echo "Switching back to main..."
+git checkout main
+echo "Done! Site will be updated in a few minutes."
+
+Make it executable:
+chmod +x deploy.sh
+
+Then just run:
+./deploy.sh
+
+ALTERNATIVE: GITHUB ACTIONS (AUTOMATED)
+---------------------------------------
+If you set up GitHub Actions, the process is simpler:
+
+1. Write your post
+2. Commit and push to main:
+   git add content/posts/my-new-post.md
+   git commit -m "Add new post: Your Post Title"
+   git push origin main
+
+3. GitHub Actions will automatically build and deploy!
+
+TROUBLESHOOTING
+---------------
+- If site doesn't update: Check GitHub Pages settings
+- If build fails: Run 'hugo' locally to check for errors
+- If custom domain stops working: Make sure CNAME file exists
+- Clear browser cache if changes don't appear
+
+USEFUL COMMANDS
+---------------
+hugo new posts/post-name.md  # Create new post
+hugo server -D              # Preview with drafts
+hugo server                 # Preview published only
+hugo                        # Build site
+git status                  # Check what changed
+git log --oneline          # View commit history
