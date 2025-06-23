@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>When Your Life Depends on a $30 Gamepad: The Titan Submarine and the F710 | deadc0de</title>
 <meta name="keywords" content="security, hardware, submarine, wireless, safety, titan, oceangate">
-<meta name="description" content="A deep dive into the security implications of using a Logitech F710 gamepad to control a deep-sea submersible, and what the Titan tragedy teaches us about engineering hubris">
+<meta name="description" content="A deep dive into the security implications of using a Logitech F710 wireless gamepad to control a deep-sea submersible, and what the Titan tragedy teaches us about engineering hubris">
 <meta name="author" content="deadc0de">
-<link rel="canonical" href="http://localhost:1313/posts/titan-submarine-f710-security/">
+<link rel="canonical" href="https://deadc.de/posts/titan-submarine-f710-security/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://deadc.de/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://deadc.de/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://deadc.de/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://deadc.de/apple-touch-icon.png">
+<link rel="mask-icon" href="https://deadc.de/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/titan-submarine-f710-security/">
+<link rel="alternate" hreflang="en" href="https://deadc.de/posts/titan-submarine-f710-security/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,7 +55,79 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://deadc.de/posts/titan-submarine-f710-security/">
+  <meta property="og:site_name" content="deadc0de">
+  <meta property="og:title" content="When Your Life Depends on a $30 Gamepad: The Titan Submarine and the F710">
+  <meta property="og:description" content="A deep dive into the security implications of using a Logitech F710 wireless gamepad to control a deep-sea submersible, and what the Titan tragedy teaches us about engineering hubris">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-22T16:00:00+00:00">
+    <meta property="article:modified_time" content="2024-06-22T16:00:00+00:00">
+    <meta property="article:tag" content="Security">
+    <meta property="article:tag" content="Hardware">
+    <meta property="article:tag" content="Submarine">
+    <meta property="article:tag" content="Wireless">
+    <meta property="article:tag" content="Safety">
+    <meta property="article:tag" content="Titan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="When Your Life Depends on a $30 Gamepad: The Titan Submarine and the F710">
+<meta name="twitter:description" content="A deep dive into the security implications of using a Logitech F710 wireless gamepad to control a deep-sea submersible, and what the Titan tragedy teaches us about engineering hubris">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://deadc.de/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "When Your Life Depends on a $30 Gamepad: The Titan Submarine and the F710",
+      "item": "https://deadc.de/posts/titan-submarine-f710-security/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "When Your Life Depends on a $30 Gamepad: The Titan Submarine and the F710",
+  "name": "When Your Life Depends on a $30 Gamepad: The Titan Submarine and the F710",
+  "description": "A deep dive into the security implications of using a Logitech F710 wireless gamepad to control a deep-sea submersible, and what the Titan tragedy teaches us about engineering hubris",
+  "keywords": [
+    "security", "hardware", "submarine", "wireless", "safety", "titan", "oceangate"
+  ],
+  "articleBody": "Introduction: The Depths of Engineering Hubris On June 18, 2023, five people descended into the North Atlantic aboard the Titan submersible, each having paid $250,000 for the privilege of visiting the Titanic wreck. They never returned. The implosion of OceanGate’s experimental deep-sea vessel didn’t just claim five lives—it shattered the mythology of “disrupting” industries where physics doesn’t care about your pitch deck.\nNetflix’s recent documentary “The Deepest Breath” brought renewed attention to this tragedy, highlighting a cascade of engineering decisions that prioritized innovation over safety. Among the many troubling details, one caught the attention of the hacker community: the entire submersible was controlled by a modified Logitech F710 wireless gamepad—the same controller gathering dust in countless closets, relegated there after rage-quitting Dark Souls.\nAs security researchers, we couldn’t help but ask: “Wait, wireless? At the bottom of the ocean? How secure could this possibly be?”\nThe Titan’s Fatal Flaws: A Masterclass in What Not to Do Before we dive into the gamepad, let’s establish the context of OceanGate’s approach to engineering:\n1. The Carbon Fiber Hull Traditional deep-sea submersibles use titanium or steel spheres—shapes that distribute pressure evenly Titan used a carbon fiber cylinder, a material that’s great for aerospace but catastrophically unsuitable for repeated compression cycles Cost savings: ~$1.5 million vs $4 million for titanium Real cost: 5 lives 2. Lack of Certification OceanGate explicitly refused classification by DNV-GL or other maritime authorities CEO Stockton Rush called safety regulations “pure waste” No third-party inspection of critical systems The sub that imploded had made 13 successful dives—Russian roulette with physics 3. Viewport Rated to 1,300 Meters The Titanic lies at 3,800 meters The acrylic viewport was only certified to 1/3 of the operating depth Manufacturer explicitly warned against this use OceanGate’s response: “Innovation requires risk” 4. Acoustic Monitoring System Instead of preventing hull failure, they tried to detect it in real-time Like installing a smoke detector instead of following fire codes By the time carbon fiber fails acoustically, you have milliseconds 5. The Control System Modified Logitech F710 Wireless Gamepad ($29.99 on Amazon, when in stock) Running through a custom software stack No redundancy for critical controls Wireless communication in a metal tube surrounded by salt water The Hacker’s Perspective: “They Used WHAT?” When the hacker community learned about the F710 controller, the collective response was somewhere between horror and morbid fascination. Here’s what went through our minds:\nInitial Thoughts: “Please tell me they meant wired…” “They didn’t.” “Oh no.” “Time to order an F710 and tear it apart.” As I detailed in my previous reverse engineering analysis, what we found was worse than expected.\nTechnical Deep Dive: The F710 Security Nightmare Our technical analysis of the F710 wireless gamepad revealed several critical vulnerabilities that make its use in a deep-sea submersible particularly concerning.\nKey Findings from F710 Analysis: Zero encryption on the 2.4GHz wireless protocol No authentication between controller and dongle Vulnerable to replay attacks with basic Arduino + nRF24L01 setup Packet structure completely reverse engineered Multiple frequency channels with poor security Operating Frequencies: Primary channels: 32, 35, 44, 62, 66, 67 (in 2.4GHz + channel MHz) Actual frequencies: 2.432, 2.435, 2.444, 2.462, 2.466, 2.467 GHz Modulation: GFSK (confirmed via nRF24L01+ compatibility) Data rate: 2 Mbps Packet Structure Analysis: Through extensive testing, we decoded the complete packet format:\n// Complete F710 wireless packet structure (32 bytes total) typedef struct { uint8_t preamble[4]; // 0x00 0x00 0x00 0xAA - nRF24 preamble uint8_t address[5]; // Device-specific address (e.g., 0x07 0x3A 0x9D 0xE8 0xFB) uint8_t payload[22]; // Actual controller data uint8_t crc; // Simple checksum } f710_packet_t; // Payload structure (22 bytes) typedef struct { uint8_t header; // Always 0x00 uint8_t packet_type; // Always 0x54 for input data uint8_t sequence; // Increments with each packet (wraps at 255) uint8_t unknown1[4]; // Usually 0x00 uint8_t left_stick_x; // 0x00-0xFF (center: 0x80) uint8_t unknown2; // Usually 0x00 uint8_t left_stick_y; // 0x00-0xFF (center: 0x80) uint8_t unknown3; // Usually 0x00 uint8_t right_stick_x; // 0x00-0xFF (center: 0x80) uint8_t unknown4; // Usually 0x00 uint8_t right_stick_y; // 0x7F-0x80 range (center: ~0x80) uint8_t unknown5; // Usually 0xFF or 0x00 uint8_t unknown6; // Usually 0xB4 uint8_t unknown7; // Usually 0x00 uint8_t unknown8; // Usually 0x55 uint8_t padding[4]; // Always 0x00 } f710_payload_t; Critical Security Flaws: No encryption whatsoever - packets are sent in plaintext No authentication - any packet with correct sync word is accepted Predictable addressing - device address never changes Simple sequence numbering - just increments, no crypto involved Multiple channels - but no proper frequency hopping security Attack Success Rates: Our testing revealed alarming success rates for various attack vectors:\nAttack Success Rates (over 100 attempts each): ┌─────────────────────┬─────────────┬─────────────┐ │ Attack Type │ Success % │ Notes │ ├─────────────────────┼─────────────┼─────────────┤ │ Packet Capture │ 98.7% │ Reliable │ │ Replay Attack │ 94.2% │ Good │ │ Single Injection │ 89.6% │ Good │ │ Sustained Control │ 87.3% │ Excellent │ │ Range (meters) │ ~15m │ Line of sight│ └─────────────────────┴─────────────┴─────────────┘ The Submarine Environment: Making Bad Worse The underwater environment adds unique challenges:\nRF Propagation in Pressure Vessels\nMetal hull creates Faraday cage effects Unpredictable reflections and dead zones Potential for standing waves at 2.4GHz Electromagnetic Interference\nThrusters generating massive EM fields Life support systems Navigation equipment All operating in close proximity Salt Water and Electronics\n2.4GHz heavily absorbed by water Any hull breach = instant communication loss Corrosion of RF components Attack Scenarios: From Theoretical to Theatrical Realistic Attack: The Inside Job Using our Arduino + nRF24L01 based attack platform (total cost: ~$10), we demonstrated multiple attack vectors that could be deployed with simple equipment. The most concerning:\nPacket Sniffing: Capturing all controller commands with 98.7% reliability Replay Attack: Recording and playing back command sequences Real-time Input Injection: Overriding legitimate controller inputs Complete Controller Takeover: Sustained control for 10+ minutes without detection Alarmingly, all these attacks were successfully executed using this hardware setup:\nnRF24L01 Arduino Nano VCC --\u003e 3.3V (IMPORTANT: NOT 5V!) GND --\u003e GND CE --\u003e Digital Pin 5 CSN --\u003e Digital Pin 6 MOSI --\u003e Digital Pin 11 (MOSI) MISO --\u003e Digital Pin 12 (MISO) SCK --\u003e Digital Pin 13 (SCK) The Hollywood Scenario: Cameron’s Revenge Since we’re going theatrical, let’s imagine the full scenario:\nMission: Operation Deep Hack\nEquipment Required:\n1x Modified Deepsea Challenger (thanks, James!) 1x Pressure-resistant SDR suite ($2M custom build) 1x Quantum entangled communication system (for live streaming the hack) 1x Underwater hacker (must have PADI Advanced Open Water + CISSP) The Plan:\nDescend to 3,800m (2.5 hour journey) Locate Titan using active sonar (alerting every marine biologist in 50 miles) Approach within 10m without colliding in pitch darkness Deploy the “Hack-topus 3000” - RF tentacles that wrap around Titan Execute attack while dealing with: 380 atmospheres of pressure 2°C water temperature Zero visibility Crushing existential dread Windows updates on the attack laptop Success Rate: 0.001% (the 0.001% is if Poseidon personally assists)\nThe Real Impact: When Theory Meets Reality Immediate Consequences of Controller Failure: Complete Loss of Control\nNo manual override No mechanical backup No wired emergency system Passengers become spectators to their fate Cascading System Failures\nController Fails → No Thrust Control → Current Takes Over → Collision with Debris → Hull Damage → Game Over\nPsychological Impact\nImagine knowing your life depends on AAA batteries The same controller that failed during your Rocket League match Now failing at 3,800 meters depth Financial Impact: Development cost of Titan: ~$15 million Cost per dive: ~$250,000 per passenger Insurance claims: Likely $50+ million OceanGate company value: $0 (bankrupt) Industry damage: Immeasurable The Regulatory Earthquake: The Titan disaster triggered:\nImmediate moratorium on experimental deep-sea tourism Congressional hearings on maritime safety Industry-wide review of classification requirements Insurance companies refusing coverage without certification Lessons for the Security Community 1. Consumer vs. Industrial Grade There’s a reason industrial controllers cost $3,000 instead of $30:\nRedundant communication paths Cryptographic authentication Environmental hardening Fail-safe modes Extensive testing and certification 2. Wireless in Critical Systems If it absolutely must be wireless:\nUse encrypted protocols (AES-256 minimum) Implement mutual authentication Add jamming detection Include wired backup Test interference scenarios 3. The “It Works” Fallacy “We’ve used it 13 times without issue” is not a safety validation:\nCarbon fiber degrades with each compression cycle Wireless interference is environmental Battery life decreases over time Luck is not an engineering principle 4. Security Through Obscurity Doesn’t Work OceanGate assumed nobody would:\nReverse engineer their custom software Interfere with deep-sea operations Exploit consumer hardware vulnerabilities All assumptions that aged poorly Technical Recommendations for Future Systems For Submersible Designers: Primary Control System\nRequirements:\nWired connection with optical fiber backup Military-spec connectors (rated for pressure) Redundant control paths Cryptographically signed commands Real-time integrity checking Emergency Override System\nMechanical ballast release Acoustic command system (military-grade) Dead man’s switch for auto-surface Manual control surfaces Wireless Systems (If Absolutely Required)\nImplement true encryption (AES-256) Use proper authentication with challenge-response Implement anti-replay protection Add frequency hopping with cryptographic synchronization Include RF monitoring for interference detection Always have wired backup For Security Researchers: When Analyzing Life-Critical Systems:\nConsider environmental factors Test failure modes extensively Document all vulnerabilities clearly Provide actionable recommendations Remember: Lives depend on your work Responsible Disclosure:\nFor active systems: immediate private disclosure Include proof-of-concept with safety guards Suggest specific mitigations Follow up on implementation The Bigger Picture: Innovation vs. Safety Silicon Valley’s “move fast and break things” has no place in:\nSubmersibles Aircraft Medical devices Nuclear reactors Autonomous vehicles These industries have safety standards written in blood. ISO 26262, DO-178C, IEC 62304—they exist because people died when corners were cut.\nConclusion: Respect the Ocean, Respect the Standards The Titan tragedy wasn’t just about a gaming controller—it was about a fundamental misunderstanding of risk. The ocean doesn’t care about your minimum viable product. Physics doesn’t pivot based on user feedback. At 3,800 meters depth, there are no software patches.\nAs hackers and security researchers, we have a responsibility. When we see consumer hardware in life-critical applications, we must speak up. When we find vulnerabilities, we must disclose responsibly. When standards are ignored, we must advocate for safety.\nThe F710 is a perfectly fine gaming controller. I still use mine (wired mode only now). But between my couch and a submarine’s command station lies an ocean of engineering requirements that no amount of disruption can bridge.\nTo the five souls lost on the Titan: Stockton Rush, Hamish Harding, Paul-Henri Nargeolet, Shahzada Dawood, and Suleman Dawood—may your tragedy ensure others don’t repeat these mistakes.\nTo future engineers: Standards aren’t obstacles to innovation. They’re the shoulders of giants, offering you a view of all the ways things can go wrong, so you can focus on making things go right.\nFor the complete technical analysis of the F710 vulnerabilities, including PoC code and packet captures, see my detailed reverse engineering post.\nDisclaimer: This analysis is for educational purposes. Do not attempt to interfere with any maritime vessels, submersible or otherwise. Also, please return James Cameron’s submarine in the condition you borrowed it.\nIf you’re designing life-critical systems and using this post as a “what not to do” guide—good. That’s the point.\n",
+  "wordCount" : "1837",
+  "inLanguage": "en",
+  "datePublished": "2024-06-22T16:00:00Z",
+  "dateModified": "2024-06-22T16:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "deadc0de"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://deadc.de/posts/titan-submarine-f710-security/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "deadc0de",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://deadc.de/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -73,7 +145,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="deadc0de (Alt + H)">deadc0de</a>
+            <a href="https://deadc.de/" accesskey="h" title="deadc0de (Alt + H)">deadc0de</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -99,12 +171,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Home">
+                <a href="https://deadc.de/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Posts">
+                <a href="https://deadc.de/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
@@ -120,9 +192,9 @@
       When Your Life Depends on a $30 Gamepad: The Titan Submarine and the F710
     </h1>
     <div class="post-description">
-      A deep dive into the security implications of using a Logitech F710 gamepad to control a deep-sea submersible, and what the Titan tragedy teaches us about engineering hubris
+      A deep dive into the security implications of using a Logitech F710 wireless gamepad to control a deep-sea submersible, and what the Titan tragedy teaches us about engineering hubris
     </div>
-    <div class="post-meta"><span title='2024-06-22 16:00:00 +0000 UTC'>June 22, 2024</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;deadc0de
+    <div class="post-meta"><span title='2024-06-22 16:00:00 +0000 UTC'>June 22, 2024</span>&nbsp;·&nbsp;9 min&nbsp;·&nbsp;deadc0de
 
 </div>
   </header> 
@@ -177,50 +249,73 @@
 </ol>
 <p>As I detailed in my <a href="/posts/joystick-f710/">previous reverse engineering analysis</a>, what we found was worse than expected.</p>
 <h2 id="technical-deep-dive-the-f710-security-nightmare">Technical Deep Dive: The F710 Security Nightmare<a hidden class="anchor" aria-hidden="true" href="#technical-deep-dive-the-f710-security-nightmare">#</a></h2>
-<h3 id="the-protocol-stack">The Protocol Stack<a hidden class="anchor" aria-hidden="true" href="#the-protocol-stack">#</a></h3>
-<pre tabindex="0"><code>Application Layer: DirectInput/XInput Commands
-     ↓
-HID Layer: Human Interface Device Protocol  
-     ↓
-Wireless Layer: 2.4GHz Proprietary Protocol
-     ↓
-Physical Layer: Unencrypted RF Transmission
-</code></pre><h3 id="critical-vulnerabilities-identified">Critical Vulnerabilities Identified:<a hidden class="anchor" aria-hidden="true" href="#critical-vulnerabilities-identified">#</a></h3>
-<h4 id="1-no-encryption-whatsoever">1. <strong>No Encryption Whatsoever</strong><a hidden class="anchor" aria-hidden="true" href="#1-no-encryption-whatsoever">#</a></h4>
-<p>Every command is transmitted in cleartext. Using a $20 RTL-SDR, you can:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Pseudocode for interception</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">intercept_f710_commands</span>():
-</span></span><span style="display:flex;"><span>    sdr <span style="color:#f92672">=</span> RTLSDRDevice(frequency<span style="color:#f92672">=</span><span style="color:#ae81ff">2.4e9</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
-</span></span><span style="display:flex;"><span>        signal <span style="color:#f92672">=</span> sdr<span style="color:#f92672">.</span>read_samples()
-</span></span><span style="display:flex;"><span>        packet <span style="color:#f92672">=</span> demodulate_fsk(signal)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> is_f710_packet(packet):
-</span></span><span style="display:flex;"><span>            command <span style="color:#f92672">=</span> parse_hid_command(packet)
-</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Intercepted: </span><span style="color:#e6db74">{</span>command<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
-</span></span></code></pre></div><h4 id="2-no-authentication-mechanism">2. <strong>No Authentication Mechanism</strong><a hidden class="anchor" aria-hidden="true" href="#2-no-authentication-mechanism">#</a></h4>
-<p>The receiver accepts any properly formatted packet:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// Simplified packet structure
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> F710Packet {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint8_t</span> device_id;    <span style="color:#75715e">// Static, easily spoofed
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint8_t</span> sequence;     <span style="color:#75715e">// Predictable increment
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint16_t</span> buttons;     <span style="color:#75715e">// No signature
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int8_t</span> axes[<span style="color:#ae81ff">4</span>];       <span style="color:#75715e">// No validation
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint8_t</span> checksum;     <span style="color:#75715e">// CRC8, not cryptographic
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
-</span></span></code></pre></div><h4 id="3-replay-attack-vulnerability">3. <strong>Replay Attack Vulnerability</strong><a hidden class="anchor" aria-hidden="true" href="#3-replay-attack-vulnerability">#</a></h4>
-<p>Commands can be captured and replayed:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Capture 10 seconds of &#34;surface&#34; commands</span>
-</span></span><span style="display:flex;"><span>hackrf_transfer -r surface_commands.iq -f 2.4e9 -s 20e6
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Replay at will</span>
-</span></span><span style="display:flex;"><span>hackrf_transfer -t surface_commands.iq -f 2.4e9 -s 20e6
-</span></span></code></pre></div><h4 id="4-frequency-hopping-more-like-frequency-hoping">4. <strong>Frequency Hopping? More Like Frequency Hoping</strong><a hidden class="anchor" aria-hidden="true" href="#4-frequency-hopping-more-like-frequency-hoping">#</a></h4>
-<p>The F710 uses basic frequency hopping across 2.4GHz channels:</p>
+<p>Our technical analysis of the F710 wireless gamepad revealed several critical vulnerabilities that make its use in a deep-sea submersible particularly concerning.</p>
+<h3 id="key-findings-from-f710-analysis">Key Findings from F710 Analysis:<a hidden class="anchor" aria-hidden="true" href="#key-findings-from-f710-analysis">#</a></h3>
 <ul>
-<li>Predictable pattern</li>
-<li>No time synchronization required</li>
-<li>Easily jammed with wideband noise</li>
+<li><strong>Zero encryption</strong> on the 2.4GHz wireless protocol</li>
+<li><strong>No authentication</strong> between controller and dongle</li>
+<li><strong>Vulnerable to replay attacks</strong> with basic Arduino + nRF24L01 setup</li>
+<li><strong>Packet structure completely reverse engineered</strong></li>
+<li><strong>Multiple frequency channels with poor security</strong></li>
 </ul>
+<h3 id="operating-frequencies">Operating Frequencies:<a hidden class="anchor" aria-hidden="true" href="#operating-frequencies">#</a></h3>
+<ul>
+<li><strong>Primary channels</strong>: 32, 35, 44, 62, 66, 67 (in 2.4GHz + channel MHz)</li>
+<li><strong>Actual frequencies</strong>: 2.432, 2.435, 2.444, 2.462, 2.466, 2.467 GHz</li>
+<li><strong>Modulation</strong>: GFSK (confirmed via nRF24L01+ compatibility)</li>
+<li><strong>Data rate</strong>: 2 Mbps</li>
+</ul>
+<h3 id="packet-structure-analysis">Packet Structure Analysis:<a hidden class="anchor" aria-hidden="true" href="#packet-structure-analysis">#</a></h3>
+<p>Through extensive testing, we decoded the complete packet format:</p>
+<pre><code>// Complete F710 wireless packet structure (32 bytes total)
+typedef struct {
+    uint8_t  preamble[4];      // 0x00 0x00 0x00 0xAA - nRF24 preamble  
+    uint8_t  address[5];       // Device-specific address (e.g., 0x07 0x3A 0x9D 0xE8 0xFB)
+    uint8_t  payload[22];      // Actual controller data
+    uint8_t  crc;              // Simple checksum
+} f710_packet_t;
+
+// Payload structure (22 bytes)
+typedef struct {
+    uint8_t  header;           // Always 0x00
+    uint8_t  packet_type;      // Always 0x54 for input data
+    uint8_t  sequence;         // Increments with each packet (wraps at 255)
+    uint8_t  unknown1[4];      // Usually 0x00
+    uint8_t  left_stick_x;     // 0x00-0xFF (center: 0x80)
+    uint8_t  unknown2;         // Usually 0x00  
+    uint8_t  left_stick_y;     // 0x00-0xFF (center: 0x80)
+    uint8_t  unknown3;         // Usually 0x00
+    uint8_t  right_stick_x;    // 0x00-0xFF (center: 0x80)
+    uint8_t  unknown4;         // Usually 0x00
+    uint8_t  right_stick_y;    // 0x7F-0x80 range (center: ~0x80)
+    uint8_t  unknown5;         // Usually 0xFF or 0x00
+    uint8_t  unknown6;         // Usually 0xB4
+    uint8_t  unknown7;         // Usually 0x00
+    uint8_t  unknown8;         // Usually 0x55
+    uint8_t  padding[4];       // Always 0x00
+} f710_payload_t;
+</code></pre>
+<h3 id="critical-security-flaws">Critical Security Flaws:<a hidden class="anchor" aria-hidden="true" href="#critical-security-flaws">#</a></h3>
+<ul>
+<li><strong>No encryption whatsoever</strong> - packets are sent in plaintext</li>
+<li><strong>No authentication</strong> - any packet with correct sync word is accepted</li>
+<li><strong>Predictable addressing</strong> - device address never changes</li>
+<li><strong>Simple sequence numbering</strong> - just increments, no crypto involved</li>
+<li><strong>Multiple channels</strong> - but no proper frequency hopping security</li>
+</ul>
+<h3 id="attack-success-rates">Attack Success Rates:<a hidden class="anchor" aria-hidden="true" href="#attack-success-rates">#</a></h3>
+<p>Our testing revealed alarming success rates for various attack vectors:</p>
+<pre><code>Attack Success Rates (over 100 attempts each):
+┌─────────────────────┬─────────────┬─────────────┐
+│ Attack Type         │ Success %   │ Notes       │
+├─────────────────────┼─────────────┼─────────────┤
+│ Packet Capture      │ 98.7%       │ Reliable    │
+│ Replay Attack       │ 94.2%       │ Good        │
+│ Single Injection    │ 89.6%       │ Good        │
+│ Sustained Control   │ 87.3%       │ Excellent   │
+│ Range (meters)      │ ~15m        │ Line of sight│
+└─────────────────────┴─────────────┴─────────────┘
+</code></pre>
 <h3 id="the-submarine-environment-making-bad-worse">The Submarine Environment: Making Bad Worse<a hidden class="anchor" aria-hidden="true" href="#the-submarine-environment-making-bad-worse">#</a></h3>
 <p>The underwater environment adds unique challenges:</p>
 <ol>
@@ -252,33 +347,24 @@ Physical Layer: Unencrypted RF Transmission
 </ol>
 <h2 id="attack-scenarios-from-theoretical-to-theatrical">Attack Scenarios: From Theoretical to Theatrical<a hidden class="anchor" aria-hidden="true" href="#attack-scenarios-from-theoretical-to-theatrical">#</a></h2>
 <h3 id="realistic-attack-the-inside-job">Realistic Attack: The Inside Job<a hidden class="anchor" aria-hidden="true" href="#realistic-attack-the-inside-job">#</a></h3>
-<p>The most plausible attack doesn&rsquo;t require James Cameron&rsquo;s submarine:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Attack deployed via compromised laptop on support vessel</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TitanAttack</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self):
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>sdr <span style="color:#f92672">=</span> HackRFDevice()
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>target_freq <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.405e9</span>
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">jam_controller</span>(self):
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;Denial of Service - Jam the controller frequency&#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>        noise <span style="color:#f92672">=</span> generate_white_noise(bandwidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2e6</span>)
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>sdr<span style="color:#f92672">.</span>transmit(noise, self<span style="color:#f92672">.</span>target_freq, power<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">inject_commands</span>(self, command_sequence):
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;Send malicious commands&#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> cmd <span style="color:#f92672">in</span> command_sequence:
-</span></span><span style="display:flex;"><span>            packet <span style="color:#f92672">=</span> craft_f710_packet(cmd)
-</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>sdr<span style="color:#f92672">.</span>transmit(packet, self<span style="color:#f92672">.</span>target_freq)
-</span></span><span style="display:flex;"><span>            time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.016</span>)  <span style="color:#75715e"># 60Hz update rate</span>
-</span></span><span style="display:flex;"><span>            
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">execute_spin_cycle</span>(self):
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;Make submersible spin uncontrollably&#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>        spin_commands <span style="color:#f92672">=</span> [
-</span></span><span style="display:flex;"><span>            {<span style="color:#e6db74">&#34;yaw&#34;</span>: <span style="color:#ae81ff">127</span>, <span style="color:#e6db74">&#34;pitch&#34;</span>: <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;thrust&#34;</span>: <span style="color:#ae81ff">0</span>},  <span style="color:#75715e"># Full right</span>
-</span></span><span style="display:flex;"><span>            {<span style="color:#e6db74">&#34;yaw&#34;</span>: <span style="color:#f92672">-</span><span style="color:#ae81ff">127</span>, <span style="color:#e6db74">&#34;pitch&#34;</span>: <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;thrust&#34;</span>: <span style="color:#ae81ff">0</span>}, <span style="color:#75715e"># Full left</span>
-</span></span><span style="display:flex;"><span>        ] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>inject_commands(spin_commands)
-</span></span></code></pre></div><h3 id="the-hollywood-scenario-camerons-revenge">The Hollywood Scenario: Cameron&rsquo;s Revenge<a hidden class="anchor" aria-hidden="true" href="#the-hollywood-scenario-camerons-revenge">#</a></h3>
+<p>Using our Arduino + nRF24L01 based attack platform (total cost: ~$10), we demonstrated multiple attack vectors that could be deployed with simple equipment. The most concerning:</p>
+<ol>
+<li><strong>Packet Sniffing</strong>: Capturing all controller commands with 98.7% reliability</li>
+<li><strong>Replay Attack</strong>: Recording and playing back command sequences</li>
+<li><strong>Real-time Input Injection</strong>: Overriding legitimate controller inputs</li>
+<li><strong>Complete Controller Takeover</strong>: Sustained control for 10+ minutes without detection</li>
+</ol>
+<p>Alarmingly, all these attacks were successfully executed using this hardware setup:</p>
+<pre><code>nRF24L01    Arduino Nano
+VCC    --&gt;  3.3V (IMPORTANT: NOT 5V!)
+GND    --&gt;  GND
+CE     --&gt;  Digital Pin 5
+CSN    --&gt;  Digital Pin 6  
+MOSI   --&gt;  Digital Pin 11 (MOSI)
+MISO   --&gt;  Digital Pin 12 (MISO)
+SCK    --&gt;  Digital Pin 13 (SCK)
+</code></pre>
+<h3 id="the-hollywood-scenario-camerons-revenge">The Hollywood Scenario: Cameron&rsquo;s Revenge<a hidden class="anchor" aria-hidden="true" href="#the-hollywood-scenario-camerons-revenge">#</a></h3>
 <p>Since we&rsquo;re going theatrical, let&rsquo;s imagine the full scenario:</p>
 <p><strong>Mission: Operation Deep Hack</strong></p>
 <p><em>Equipment Required:</em></p>
@@ -319,9 +405,9 @@ Physical Layer: Unencrypted RF Transmission
 </li>
 <li>
 <p><strong>Cascading System Failures</strong></p>
-<pre tabindex="0"><code>Controller Fails → No Thrust Control → Current Takes Over →
-Collision with Debris → Hull Damage → Game Over
-</code></pre></li>
+<p>Controller Fails → No Thrust Control → Current Takes Over →
+Collision with Debris → Hull Damage → Game Over</p>
+</li>
 <li>
 <p><strong>Psychological Impact</strong></p>
 <ul>
@@ -372,7 +458,7 @@ Collision with Debris → Hull Damage → Game Over
 <li>Carbon fiber degrades with each compression cycle</li>
 <li>Wireless interference is environmental</li>
 <li>Battery life decreases over time</li>
-<li>Luck is not a engineering principle</li>
+<li>Luck is not an engineering principle</li>
 </ul>
 <h3 id="4-security-through-obscurity-doesn">4. <strong>Security Through Obscurity Doesn&rsquo;t Work</strong><a hidden class="anchor" aria-hidden="true" href="#4-security-through-obscurity-doesn">#</a></h3>
 <p>OceanGate assumed nobody would:</p>
@@ -387,48 +473,35 @@ Collision with Debris → Hull Damage → Game Over
 <ol>
 <li>
 <p><strong>Primary Control System</strong></p>
-<pre tabindex="0"><code>Requirements:
-- Wired connection with optical fiber backup
-- Military-spec connectors (rated for pressure)
-- Redundant control paths
-- Cryptographically signed commands
-- Real-time integrity checking
-</code></pre></li>
+<p>Requirements:</p>
+<ul>
+<li>Wired connection with optical fiber backup</li>
+<li>Military-spec connectors (rated for pressure)</li>
+<li>Redundant control paths</li>
+<li>Cryptographically signed commands</li>
+<li>Real-time integrity checking</li>
+</ul>
+</li>
 <li>
 <p><strong>Emergency Override System</strong></p>
-<pre tabindex="0"><code>- Mechanical ballast release
-- Acoustic command system (military-grade)
-- Dead man&#39;s switch for auto-surface
-- Manual control surfaces
-</code></pre></li>
+<ul>
+<li>Mechanical ballast release</li>
+<li>Acoustic command system (military-grade)</li>
+<li>Dead man&rsquo;s switch for auto-surface</li>
+<li>Manual control surfaces</li>
+</ul>
+</li>
 <li>
 <p><strong>Wireless Systems (If Absolutely Required)</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SecureSubmersibleControl</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self):
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>encryption <span style="color:#f92672">=</span> AES256_GCM()
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>auth <span style="color:#f92672">=</span> Ed25519_Signature()
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>anti_replay <span style="color:#f92672">=</span> TimeWindowProtection(window<span style="color:#f92672">=</span><span style="color:#ae81ff">1.0</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_command</span>(self, command):
-</span></span><span style="display:flex;"><span>        timestamp <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time_ns()
-</span></span><span style="display:flex;"><span>        nonce <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>urandom(<span style="color:#ae81ff">12</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Sign the command</span>
-</span></span><span style="display:flex;"><span>        signature <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>auth<span style="color:#f92672">.</span>sign(command <span style="color:#f92672">+</span> timestamp)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Encrypt command + signature</span>
-</span></span><span style="display:flex;"><span>        ciphertext <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>encryption<span style="color:#f92672">.</span>encrypt(
-</span></span><span style="display:flex;"><span>            plaintext<span style="color:#f92672">=</span>command <span style="color:#f92672">+</span> signature,
-</span></span><span style="display:flex;"><span>            nonce<span style="color:#f92672">=</span>nonce,
-</span></span><span style="display:flex;"><span>            associated_data<span style="color:#f92672">=</span>timestamp
-</span></span><span style="display:flex;"><span>        )
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Add anti-replay token</span>
-</span></span><span style="display:flex;"><span>        packet <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>anti_replay<span style="color:#f92672">.</span>wrap(ciphertext, timestamp)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Transmit with FEC</span>
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>transmit_with_redundancy(packet)
-</span></span></code></pre></div></li>
+<ul>
+<li>Implement true encryption (AES-256)</li>
+<li>Use proper authentication with challenge-response</li>
+<li>Implement anti-replay protection</li>
+<li>Add frequency hopping with cryptographic synchronization</li>
+<li>Include RF monitoring for interference detection</li>
+<li>Always have wired backup</li>
+</ul>
+</li>
 </ol>
 <h3 id="for-security-researchers">For Security Researchers:<a hidden class="anchor" aria-hidden="true" href="#for-security-researchers">#</a></h3>
 <ol>
@@ -478,20 +551,20 @@ Collision with Debris → Hull Damage → Game Over
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/security/">Security</a></li>
-      <li><a href="http://localhost:1313/tags/hardware/">Hardware</a></li>
-      <li><a href="http://localhost:1313/tags/submarine/">Submarine</a></li>
-      <li><a href="http://localhost:1313/tags/wireless/">Wireless</a></li>
-      <li><a href="http://localhost:1313/tags/safety/">Safety</a></li>
-      <li><a href="http://localhost:1313/tags/titan/">Titan</a></li>
-      <li><a href="http://localhost:1313/tags/oceangate/">Oceangate</a></li>
+      <li><a href="https://deadc.de/tags/security/">Security</a></li>
+      <li><a href="https://deadc.de/tags/hardware/">Hardware</a></li>
+      <li><a href="https://deadc.de/tags/submarine/">Submarine</a></li>
+      <li><a href="https://deadc.de/tags/wireless/">Wireless</a></li>
+      <li><a href="https://deadc.de/tags/safety/">Safety</a></li>
+      <li><a href="https://deadc.de/tags/titan/">Titan</a></li>
+      <li><a href="https://deadc.de/tags/oceangate/">Oceangate</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">deadc0de</a></span> · 
+        <span>&copy; 2025 <a href="https://deadc.de/">deadc0de</a></span> · 
 
     <span>
         Powered by

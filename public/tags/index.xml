@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on deadc0de</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://deadc.de/tags/</link>
     <description>Recent content in Tags on deadc0de</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://deadc.de/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2.4GHz</title>
-      <link>http://localhost:1313/tags/2.4ghz/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/2.4ghz/</guid>
+      <link>https://deadc.de/tags/2.4ghz/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://deadc.de/tags/2.4ghz/</guid>
       <description></description>
     </item>
     <item>
       <title>Exploitation</title>
-      <link>http://localhost:1313/tags/exploitation/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/exploitation/</guid>
+      <link>https://deadc.de/tags/exploitation/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://deadc.de/tags/exploitation/</guid>
       <description></description>
     </item>
     <item>
       <title>Gamepad</title>
-      <link>http://localhost:1313/tags/gamepad/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/gamepad/</guid>
+      <link>https://deadc.de/tags/gamepad/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://deadc.de/tags/gamepad/</guid>
       <description></description>
     </item>
     <item>
-      <title>HID</title>
-      <link>http://localhost:1313/tags/hid/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/hid/</guid>
+      <title>Mousejack</title>
+      <link>https://deadc.de/tags/mousejack/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://deadc.de/tags/mousejack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NRF24L01</title>
+      <link>https://deadc.de/tags/nrf24l01/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://deadc.de/tags/nrf24l01/</guid>
       <description></description>
     </item>
     <item>
       <title>Reverse-Engineering</title>
-      <link>http://localhost:1313/tags/reverse-engineering/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/reverse-engineering/</guid>
+      <link>https://deadc.de/tags/reverse-engineering/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://deadc.de/tags/reverse-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>http://localhost:1313/tags/security/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/security/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>USB</title>
-      <link>http://localhost:1313/tags/usb/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/usb/</guid>
+      <link>https://deadc.de/tags/security/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://deadc.de/tags/security/</guid>
       <description></description>
     </item>
     <item>
       <title>Wireless</title>
-      <link>http://localhost:1313/tags/wireless/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/wireless/</guid>
+      <link>https://deadc.de/tags/wireless/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://deadc.de/tags/wireless/</guid>
       <description></description>
     </item>
     <item>
       <title>Hardware</title>
-      <link>http://localhost:1313/tags/hardware/</link>
+      <link>https://deadc.de/tags/hardware/</link>
       <pubDate>Sat, 22 Jun 2024 16:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/hardware/</guid>
+      <guid>https://deadc.de/tags/hardware/</guid>
       <description></description>
     </item>
     <item>
       <title>Oceangate</title>
-      <link>http://localhost:1313/tags/oceangate/</link>
+      <link>https://deadc.de/tags/oceangate/</link>
       <pubDate>Sat, 22 Jun 2024 16:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/oceangate/</guid>
+      <guid>https://deadc.de/tags/oceangate/</guid>
       <description></description>
     </item>
     <item>
       <title>Safety</title>
-      <link>http://localhost:1313/tags/safety/</link>
+      <link>https://deadc.de/tags/safety/</link>
       <pubDate>Sat, 22 Jun 2024 16:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/safety/</guid>
+      <guid>https://deadc.de/tags/safety/</guid>
       <description></description>
     </item>
     <item>
       <title>Submarine</title>
-      <link>http://localhost:1313/tags/submarine/</link>
+      <link>https://deadc.de/tags/submarine/</link>
       <pubDate>Sat, 22 Jun 2024 16:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/submarine/</guid>
+      <guid>https://deadc.de/tags/submarine/</guid>
       <description></description>
     </item>
     <item>
       <title>Titan</title>
-      <link>http://localhost:1313/tags/titan/</link>
+      <link>https://deadc.de/tags/titan/</link>
       <pubDate>Sat, 22 Jun 2024 16:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/titan/</guid>
+      <guid>https://deadc.de/tags/titan/</guid>
       <description></description>
     </item>
   </channel>

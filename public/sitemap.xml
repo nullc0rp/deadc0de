@@ -2,70 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://deadc.de/</loc>
     <lastmod>2025-06-22T15:34:43-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://deadc.de/posts/</loc>
     <lastmod>2025-06-22T15:34:43-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/2.4ghz/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/tags/2.4ghz/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/categories/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/joystick-f710/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/posts/joystick-f710/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/exploitation/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/tags/exploitation/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gamepad/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/tags/gamepad/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/hardware-security/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/categories/hardware-security/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hid/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/tags/mousejack/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/reverse-engineering/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/tags/nrf24l01/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/security/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/tags/reverse-engineering/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/tags/security/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/usb/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/tags/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wireless/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/tags/wireless/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/wireless-security/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
+    <loc>https://deadc.de/categories/wireless-security/</loc>
+    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/analysis/</loc>
+    <loc>https://deadc.de/categories/analysis/</loc>
     <lastmod>2024-06-22T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hardware/</loc>
+    <loc>https://deadc.de/tags/hardware/</loc>
     <lastmod>2024-06-22T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/oceangate/</loc>
+    <loc>https://deadc.de/tags/oceangate/</loc>
     <lastmod>2024-06-22T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/safety/</loc>
+    <loc>https://deadc.de/tags/safety/</loc>
     <lastmod>2024-06-22T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/submarine/</loc>
+    <loc>https://deadc.de/tags/submarine/</loc>
     <lastmod>2024-06-22T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/titan/</loc>
+    <loc>https://deadc.de/tags/titan/</loc>
     <lastmod>2024-06-22T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/titan-submarine-f710-security/</loc>
+    <loc>https://deadc.de/posts/titan-submarine-f710-security/</loc>
     <lastmod>2024-06-22T16:00:00+00:00</lastmod>
   </url>
 </urlset>

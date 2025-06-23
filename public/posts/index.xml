@@ -2,37 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on deadc0de</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://deadc.de/posts/</link>
     <description>Recent content in Posts on deadc0de</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://deadc.de/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Complete Technical Analysis: Reverse Engineering the Logitech F710 Wireless Gamepad and Developing a Security PoC</title>
-      <link>http://localhost:1313/posts/joystick-f710/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/joystick-f710/</guid>
+      <title>Complete Technical Analysis: Reverse Engineering the Logitech F710 Wireless Gamepad - When Your Controller Becomes an Open Book</title>
+      <link>https://deadc.de/posts/joystick-f710/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://deadc.de/posts/joystick-f710/</guid>
       <description>&lt;h2 id=&#34;executive-summary&#34;&gt;Executive Summary&lt;/h2&gt;
-&lt;p&gt;This comprehensive technical analysis documents the complete reverse engineering of the Logitech F710 wireless gamepad, including the development of a proof-of-concept (PoC) that demonstrates critical security vulnerabilities in the device&amp;rsquo;s wireless protocol. Our research revealed that the F710 uses an unencrypted, unauthenticated 2.4GHz proprietary protocol vulnerable to replay attacks, signal injection, and device spoofing.&lt;/p&gt;
-&lt;p&gt;Key findings:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;No encryption&lt;/strong&gt; on the wireless protocol&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;No mutual authentication&lt;/strong&gt; between controller and dongle&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vulnerable to replay attacks&lt;/strong&gt; with basic SDR equipment&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Successfully developed PoC&lt;/strong&gt; for controller spoofing and input injection&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Legacy protocol&lt;/strong&gt; similar to vulnerable Logitech Unifying receivers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;The Logitech F710 represents a significant portion of the wireless gamepad market, particularly in industrial and commercial applications where its reliability and compatibility are valued. However, our research reveals that this popularity comes with serious security implications.&lt;/p&gt;</description>
+&lt;p&gt;&lt;em&gt;TL;DR: Your wireless gamepad is basically shouting your button presses to anyone with a $20 radio module. We built a complete attack framework using Arduino + nRF24L01 that can sniff, replay, and inject controller commands. Spoiler alert: there&amp;rsquo;s no encryption, no authentication, and apparently no one at Logitech thought &amp;ldquo;maybe we should secure this thing.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This comprehensive technical analysis documents our complete reverse engineering journey of the Logitech F710 wireless gamepad, from initial USB analysis through wireless protocol dissection, to developing a working proof-of-concept that demonstrates critical security vulnerabilities.&lt;/p&gt;</description>
     </item>
     <item>
       <title>When Your Life Depends on a $30 Gamepad: The Titan Submarine and the F710</title>
-      <link>http://localhost:1313/posts/titan-submarine-f710-security/</link>
+      <link>https://deadc.de/posts/titan-submarine-f710-security/</link>
       <pubDate>Sat, 22 Jun 2024 16:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/titan-submarine-f710-security/</guid>
-      <description>A deep dive into the security implications of using a Logitech F710 gamepad to control a deep-sea submersible, and what the Titan tragedy teaches us about engineering hubris</description>
+      <guid>https://deadc.de/posts/titan-submarine-f710-security/</guid>
+      <description>A deep dive into the security implications of using a Logitech F710 wireless gamepad to control a deep-sea submersible, and what the Titan tragedy teaches us about engineering hubris</description>
     </item>
   </channel>
 </rss>
